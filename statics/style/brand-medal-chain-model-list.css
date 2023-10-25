@@ -1,0 +1,12 @@
+@font-face {
+  font-family: IranSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.fecharge.ir/fonts/iranSans/IRANSansWeb(FaNum).woff2") format("woff2");
+}
+body {
+  font-family: IranSans;
+  direction: rtl;
+  margin: 0;
+  background-color: #F4F6F9;
+}/*# sourceMappingURL=brand-medal-chain-model-list.css.map */
