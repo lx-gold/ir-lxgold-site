@@ -48,7 +48,7 @@ module.exports = function buildSelectBrandPanelHtml
                 }
 
                 return `
-                <ul>
+                <ul class="brand-select-panel">
                     ${selectBrandItemHtmlRenderResult}
                 </ul>`
             }

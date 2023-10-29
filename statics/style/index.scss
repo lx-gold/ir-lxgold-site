@@ -1,2 +1,48 @@
-@import 'main';
+@import "main";
+@import "components/brand/brand-select-item";
 
+.model-list {
+  background-color: #fff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  li {
+    border-radius: 4px;
+    border: 1px solid #e6e5e5;
+    padding: 12px;
+    dl {
+      dt {
+        color: #807e7e;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+      dd {
+        color: #0d0d0d;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+    a {
+      border-radius: 39px;
+      background: #d5b25d;
+      color: #352d17;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22px;
+      padding: 9px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

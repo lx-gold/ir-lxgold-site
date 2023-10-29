@@ -55,16 +55,21 @@ module.exports = function buildBrandSelectItemHtml
                             </dt>
                             <dd>
                                 <img
-                                    width = '100px'
                                     src = '/statics/images/brand/${brand.logo_file_name}'
                                 />
                             </dd>
                             
                             <dt>
-                                عنوان
+                               عنوان فارسی
                             </dt>
                             <dd>
-                                ${brand.title_fa} - ${brand.title_en}
+                                ${brand.title_fa}
+                            </dd>
+                            <dt>
+                            عنوان انگلیسی
+                            </dt>
+                            <dd>
+                               ${brand.title_en}
                             </dd>
                         </dl>
 
