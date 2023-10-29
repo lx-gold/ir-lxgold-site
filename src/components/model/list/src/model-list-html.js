@@ -35,7 +35,7 @@ module.exports = function buildModelListHtml
                 }
 
                 return `
-                <ul>
+                <ul class="model-list">
                     ${modelListHtmlRender}
                 </ul>`
             }
