@@ -38,6 +38,15 @@ module.exports = function buileModelListItemHtml
                         <dl>
 
                             <dt>
+                                تصویر
+                            </dt>
+                            <dd>
+                                <img
+                                    src = '/statics/images/brand/acura-logo.png'
+                                />
+                            </dd>
+
+                            <dt>
                                 عنوان
                             </dt>
                             <dd>
