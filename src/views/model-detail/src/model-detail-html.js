@@ -124,6 +124,9 @@ module.exports = function buildModelDetailHtmlPage
                                 ${modelDetailHtmlContent}
                             </ul>
 
+                            <button>
+                            ثبت سفارش
+                            </button>
                         </body>
                     </html>
                 `

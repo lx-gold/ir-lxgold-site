@@ -22,6 +22,8 @@ module.exports = function buileModelDetail
                     <li>
                         <dl>
 
+                            
+
                             <dt>
                                 عنوان
                             </dt>

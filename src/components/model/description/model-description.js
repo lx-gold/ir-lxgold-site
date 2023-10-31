@@ -39,10 +39,16 @@ module.exports = function buildModelDescription
 
                 
                 return `
+                        <img
+                            src = '/statics/images/brand/acura-logo.png'
+                        />
                     <article>
+
                         <h2>
                             ${modelTitle}
                         </h2>
+
+                        
 
                         <p>
                             ${brandContent}
@@ -61,6 +67,8 @@ module.exports = function buildModelDescription
                         </p>
 
                     </article>
+
+                   
                 `
             }
     }

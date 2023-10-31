@@ -122,6 +122,10 @@ module.exports = function buildModelDetailAmpPage
                             <aside>
                                 ${modelDetailAmpContent}
                             </aside>
+
+                            <button>
+                            ثبت سفارش
+                            </button>
                         </body>
                     </html>
                 `
