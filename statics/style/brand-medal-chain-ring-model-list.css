@@ -9,4 +9,41 @@ body {
   direction: rtl;
   margin: 0;
   background-color: #f4f6f9;
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@-moz-document url-prefix() {
+  button {
+    font-family: NunitoSans, serif !important;
+  }
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+legend,
+ul,
+li,
+ol,
+fieldset,
+dd,
+dt,
+dl {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }/*# sourceMappingURL=brand-medal-chain-ring-model-list.css.map */
