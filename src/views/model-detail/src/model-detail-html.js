@@ -120,9 +120,9 @@ module.exports = function buildModelDetailHtmlPage
                                 ${modelDescriptionHtmlContent}
                             </main>
 
-                            <aside>
+                            <ul class="model-details">
                                 ${modelDetailHtmlContent}
-                            </aside>
+                            </ul>
 
                         </body>
                     </html>
