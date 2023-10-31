@@ -59,7 +59,7 @@ module.exports = function buildSelectMedalPanelHtml
                     }
 
                 return `
-                    <ul>
+                    <ul class="brand-model">
                         ${selectMedalItemRenderHtmlResult}
                     </ul>
                 `;
