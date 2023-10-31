@@ -38,7 +38,7 @@ module.exports = function buildGoToBrandChainModelListHtml
                         href='/models/brand/${brand.id}/medal/${medal.id}/chain/${chain.id}/'
                         title='لیست مدل های ${brand.title_fa} با مدال ${medal.title_fa} و زنجیر ${chain.title_fa}'
                     >
-                        ${chain.title_fa}
+                        انتخاب
                     </a>
                 `
                 return content;

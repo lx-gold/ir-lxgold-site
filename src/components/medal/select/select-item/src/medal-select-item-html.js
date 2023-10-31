@@ -59,8 +59,41 @@ module.exports = function buildMedalSelectItemHtml
                     <li
                         ${liClassProperty}
                     >
-                        ${medal.title_fa}
-                        ${goToBrandMedalModelListButtonHtmlContent}
+                        <dl>
+                            <dt>
+                                لوگو
+                            </dt>
+                            <dd>
+                                <img
+                                    src = '/statics/images/brand/acura-logo.png'
+                                />
+                            </dd>
+                            
+                            <dt>
+                                عنوان فارسی
+                            </dt>
+                            <dd>
+                                ${medal.title_fa}
+                            </dd>
+                            <dt>
+                            عنوان انگلیسی
+                            </dt>
+                            <dd>
+                                ${medal.title_en}
+                            </dd>
+                            <dt>
+                                وزن
+                            </dt>
+                            <dd>
+                                ${medal.weight}
+                            </dd>
+                        </dl>
+
+                        <ul>
+                            <li>
+                                ${goToBrandMedalModelListButtonHtmlContent}
+                            </li>
+                        </ul>
                     </li>
                 `
             }

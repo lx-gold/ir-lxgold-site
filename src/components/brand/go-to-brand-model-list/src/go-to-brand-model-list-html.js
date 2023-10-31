@@ -21,7 +21,7 @@ module.exports = function buildGoToBrandModelListHtml
                         href='/models/brand/${brand.id}/'
                         title='لیست مدل های ${brand.title_fa}'
                     >
-                        ${brand.title_fa}
+                        انتخاب
                     </a>
                 `
                 return content;

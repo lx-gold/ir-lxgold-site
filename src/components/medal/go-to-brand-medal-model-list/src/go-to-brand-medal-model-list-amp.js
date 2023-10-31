@@ -30,7 +30,7 @@ module.exports = function buildGoToBrandMedalModelListAmp
                         href='/amp/models/brand/${brand.id}/medal/${medal.id}/'
                         title='لیست مدل های ${brand.title_fa} با طرح ${medal.title_fa}'
                     >
-                        ${medal.title_fa}
+                        انتخاب
                     </a>
                 `
                 return content;

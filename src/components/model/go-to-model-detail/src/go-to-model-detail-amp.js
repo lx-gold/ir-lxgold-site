@@ -21,7 +21,7 @@ module.exports = function buildGoToModelDetailAmp
                         href='/amp/models/${model.id}/'
                         title='خرید آنلاین سوئیج طلا'
                     >
-                        ${model.title}
+                        انتخاب
                     </a>
                 `
                 
