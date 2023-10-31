@@ -124,6 +124,14 @@ dl {
   border-radius: 4px;
   border: 1px solid #e6e5e5;
   padding: 12px;
+  position: relative;
+}
+.model-list li dl {
+  display: grid;
+  grid-template-columns: 50% 15% 35%;
+  grid-template-rows: repeat(6, max-content);
+  align-items: center;
+  row-gap: 8px;
 }
 .model-list li dl dt {
   color: #807e7e;
@@ -135,12 +143,30 @@ dl {
 .model-list li dl dt:nth-child(1) {
   display: none;
 }
+.model-list li dl dt:nth-child(11) {
+  display: none;
+}
 .model-list li dl dd {
   color: #0d0d0d;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+}
+.model-list li dl dd:nth-child(2) {
+  grid-row: span 6;
+}
+.model-list li dl dd:nth-child(12) {
+  color: #0d0d0d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  position: absolute;
+  bottom: 12px;
+}
+.model-list li dl dd img {
+  width: 100%;
 }
 .model-list li a {
   border-radius: 39px;
@@ -151,8 +177,19 @@ dl {
   font-weight: 700;
   line-height: 22px;
   padding: 9px 0;
-  width: 100%;
+  width: 40%;
+  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 24px;
+}
+.model-list li a::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #e6e5e5;
+  position: absolute;
+  right: 0;
+  bottom: 64px;
 }/*# sourceMappingURL=index.css.map */
