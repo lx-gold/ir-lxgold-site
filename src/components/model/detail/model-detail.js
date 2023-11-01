@@ -1,6 +1,26 @@
 module.exports = function buileModelDetail
-()
+(
     {
+        priceLabel,
+        weightLabel
+    }
+)
+    {
+        if
+        (
+            !priceLabel
+        )
+            {
+                throw new Error('buileModelDetail must have priceLabel');
+            }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buileModelDetail must have weightLabel');
+            }
         return async function modelDetail
         (
             {
@@ -53,18 +73,20 @@ module.exports = function buileModelDetail
                                 ${model.ring.title_fa}
                             </dd>
 
-                            <dt>
-                                قیمت
-                            </dt>
-                            <dd>
-                                ${model.price}
-                            </dd>
+                            
 
                             <dt>
                                 وزن
                             </dt>
                             <dd>
-                                ${model.weight}
+                                ${weightLabel({weight:model.weight})}
+                            </dd>
+
+                            <dt>
+                                قیمت
+                            </dt>
+                            <dd>
+                                ${priceLabel({price: model.price})}
                             </dd>
 
                         </dl>

@@ -39,6 +39,7 @@ module.exports = function buildGetAllModel
                                 title_fa:"طنابی",
                                 title_en:"rope",
                                 thumbnail_file_name:'rope.jpg',
+                                weight:5
                             }
                     },
                     {

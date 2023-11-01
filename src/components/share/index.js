@@ -16,12 +16,15 @@ module.exports = function
 
         const siteMap = require('./sitemap')();
 
+        const label = require('./label')();
+
 
         const services = Object.freeze(
             {
                 headTag: headTag,
                 ldJson: ldJson,
-                siteMap: siteMap
+                siteMap: siteMap,
+                label: label
             }
         );
 

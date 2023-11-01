@@ -10,7 +10,9 @@ module.exports = function
         selectChain,
         selectMedal,
         selectRing,
-        webPageLdJson
+        webPageLdJson,
+        priceLabel,
+        weightLabel
     }
 )
     {
@@ -77,7 +79,12 @@ module.exports = function
             }
         );
 
-        const modelDetail = buileModelDetail();
+        const modelDetail = buileModelDetail(
+            {
+                priceLabel: priceLabel,
+                weightLabel:weightLabel
+            }
+        );
 
         const modelProductLdJson = buildModelProductLdJson();
 

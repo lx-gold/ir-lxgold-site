@@ -27,7 +27,9 @@ module.exports = function
                 selectChain: chainComponents.selectChain,
                 selectMedal: medalComponents.selectMedal,
                 selectRing: ringComponents.selectRing,
-                webPageLdJson: shareComponents.ldJson.webPage
+                webPageLdJson: shareComponents.ldJson.webPage,
+                priceLabel: shareComponents.label.priceLabel,
+                weightLabel: shareComponents.label.weightLabel
             }
         );
 
