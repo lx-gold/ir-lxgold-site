@@ -131,7 +131,7 @@ dl {
   grid-template-columns: 50% 15% 35%;
   grid-template-rows: repeat(6, max-content);
   align-items: center;
-  row-gap: 8px;
+  row-gap: 6px;
 }
 .model-list li dl dt {
   color: #807e7e;
@@ -140,7 +140,7 @@ dl {
   font-weight: 400;
   line-height: 22px;
 }
-.model-list li dl dt:nth-child(1) {
+.model-list li dl dt:nth-child(1), .model-list li dl dt:nth-child(3) {
   display: none;
 }
 .model-list li dl dt:nth-child(11) {
@@ -156,6 +156,9 @@ dl {
 .model-list li dl dd:nth-child(2) {
   grid-row: span 6;
 }
+.model-list li dl dd:nth-child(4) {
+  display: none;
+}
 .model-list li dl dd:nth-child(12) {
   color: #0d0d0d;
   font-size: 16px;
@@ -163,7 +166,7 @@ dl {
   font-weight: 700;
   line-height: 26px;
   position: absolute;
-  bottom: 12px;
+  bottom: 20px;
 }
 .model-list li dl dd img {
   width: 100%;
