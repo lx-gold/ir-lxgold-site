@@ -466,4 +466,57 @@ dl {
   border: 1px solid #eee0be;
   width: 100%;
   padding: 8px 0;
+}
+
+.brand-medal-chain-model-list {
+  background-color: #fff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+.brand-medal-chain-model-list li {
+  border-radius: 4px;
+  border: 1px solid #e6e5e5;
+  padding: 12px;
+  position: relative;
+}
+.brand-medal-chain-model-list li dl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.brand-medal-chain-model-list li dl dt {
+  display: none;
+}
+.brand-medal-chain-model-list li dl dd {
+  color: #0d0d0d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+.brand-medal-chain-model-list li ul {
+  margin-top: 8px;
+}
+.brand-medal-chain-model-list li ul li {
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+}
+.brand-medal-chain-model-list li ul li a {
+  color: #352d17;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  border-radius: 39px;
+  border: 1px solid #eee0be;
+  width: 100%;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=brand-medal-model-list.css.map */
