@@ -80,7 +80,7 @@ module.exports = function buildSelectRingPanelHtml
                     }
 
                 return `
-                    <ul>
+                    <ul class="brand-medal-chain-model-list">
                         ${selectRingItemHtmlRenderResult}
                     </ul>
                 `;

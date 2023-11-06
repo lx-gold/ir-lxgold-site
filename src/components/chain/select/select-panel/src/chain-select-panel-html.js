@@ -69,7 +69,7 @@ module.exports = function buildSelectChainPanelHtml
                     }
 
                 return `
-                    <ul class="brand-medal-chain-model-list">
+                    <ul class="brand-medal-model-list">
                         ${selectChainItemRenderHtmlResult}
                     </ul>
                 `;
