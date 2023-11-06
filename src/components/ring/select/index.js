@@ -1,13 +1,15 @@
 module.exports = function
 (
     {
-        goToBrandChainRingModelListButton
+        goToBrandChainRingModelListButton,
+        weightLabel
     }
 )
     {
         const selectItemServices = require('./select-item')(
             {
-                goToBrandChainRingModelListButton: goToBrandChainRingModelListButton
+                goToBrandChainRingModelListButton: goToBrandChainRingModelListButton,
+                weightLabel: weightLabel
             }
         );
 

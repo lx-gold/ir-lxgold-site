@@ -68,10 +68,33 @@ module.exports = function buildSelectChainPanelAmp
                         selectChainItemRenderAmpResult += currentChainAmpRender;
                     }
 
-                return `
-                    <ul>
-                        ${selectChainItemRenderAmpResult}
-                    </ul>
-                `;
+                if
+                (
+                    selectedChain  
+                )
+                    {
+                        return `
+                        <details>
+                            <summary>
+                                <img
+                                    src='/statics/images/chain/${selectedChain.thumbnail_file_name}'
+                                />
+                                
+                            </summary>
+                            <ul class="brand-model">
+                                ${selectChainItemRenderAmpResult}
+                            </ul>
+                        </details>
+                        `
+                    }
+                else
+                    {
+                        return `
+                            <ul class="brand-model">
+                                ${selectChainItemRenderAmpResult}
+                            </ul>
+                        `
+                    }
+
             }
     }

@@ -1,7 +1,8 @@
 module.exports = function buildRingSelectItemAmp
 (
     {
-        goToBrandChainRingModelListAmpButton
+        goToBrandChainRingModelListAmpButton,
+        weightLabel
     }
 )
     {
@@ -11,6 +12,14 @@ module.exports = function buildRingSelectItemAmp
         )
             {
                 throw new Error('buildRingSelectItemAmp must have goToBrandChainRingModelListAmpButton');
+            }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buildRingSelectItemAmp must have weightLabel');
             }
         return async function ringSelectItemAmp
         (
@@ -91,10 +100,24 @@ module.exports = function buildRingSelectItemAmp
                             </dd>
                             
                             <dt>
-                                عنوان
+                                عنوان فارسی
                             </dt>
                             <dd>
-                                ${ring.title_fa} - ${ring.title_en}
+                                ${ring.title_fa}
+                            </dd>
+                            
+                            <dt>
+                                عنوان انگلیسی
+                            </dt>
+                            <dd>
+                                ${ring.title_en}
+                            </dd>
+
+                            <dt>
+                                وزن
+                            </dt>
+                            <dd>
+                                ${weightLabel({weight:ring.weight})}
                             </dd>
                         </dl>
 

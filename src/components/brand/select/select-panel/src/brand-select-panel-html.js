@@ -47,9 +47,33 @@ module.exports = function buildSelectBrandPanelHtml
                     selectBrandItemHtmlRenderResult += currentBrandHtmlRender;
                 }
 
-                return `
-                <ul class="brand-select-panel">
-                    ${selectBrandItemHtmlRenderResult}
-                </ul>`
+                if
+                (
+                    selectedBrand  
+                )
+                    {
+                        return `
+                        <details>
+                            <summary>
+                                <img
+                                    src = '/statics/images/brand/${selectedBrand.logo_file_name}'
+                                />
+                                
+                            </summary>
+                            <ul class="brand-select-panel">
+                                ${selectBrandItemHtmlRenderResult}
+                            </ul>
+                        </details>
+                        `
+                    }
+                else
+                    {
+                        return `
+                            <ul class="brand-select-panel">
+                                ${selectBrandItemHtmlRenderResult}
+                            </ul>
+                        `
+                    }
+                
             }
     }

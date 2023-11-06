@@ -1,7 +1,8 @@
 module.exports = function buildMedalSelectItemHtml
 (
     {
-        goToBrandMedalModelListButtonHtml
+        goToBrandMedalModelListButtonHtml,
+        weightLabel
     }
 )
     {
@@ -85,7 +86,7 @@ module.exports = function buildMedalSelectItemHtml
                                 وزن
                             </dt>
                             <dd>
-                                ${medal.weight}
+                                ${weightLabel({weight:medal.weight})}
                             </dd>
                         </dl>
 

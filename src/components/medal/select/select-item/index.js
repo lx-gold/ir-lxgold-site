@@ -4,18 +4,21 @@ const buildMedalSelectItemAmp = require('./src/medal-select-item-amp');
 module.exports = function
 (
     {
-        goToBrandMedalModelListButton
+        goToBrandMedalModelListButton,
+        weightLabel
     }
 )
     {
         const medalSelectItemHtml = buildMedalSelectItemHtml(
             {
-                goToBrandMedalModelListButtonHtml: goToBrandMedalModelListButton.html
+                goToBrandMedalModelListButtonHtml: goToBrandMedalModelListButton.html,
+                weightLabel: weightLabel
             }
         );
         const medalSelectItemAmp = buildMedalSelectItemAmp(
             {
-                goToBrandMedalModelListButtonAmp: goToBrandMedalModelListButton.amp
+                goToBrandMedalModelListButtonAmp: goToBrandMedalModelListButton.amp,
+                weightLabel: weightLabel
             }
         );
 

@@ -58,10 +58,32 @@ module.exports = function buildSelectMedalPanelAmp
                         selectMedalItemRenderAmpResult += currentMedalAmpRender;
                     }
 
-                return `
-                    <ul>
-                        ${selectMedalItemRenderAmpResult}
-                    </ul>
-                `;
+                if
+                (
+                    selectedMedal  
+                )
+                    {
+                        return `
+                        <details>
+                            <summary>
+                                <img
+                                    src = '/statics/images/brand/acura-logo.png'
+                                />
+                                
+                            </summary>
+                            <ul class="brand-model">
+                                ${selectMedalItemRenderAmpResult}
+                            </ul>
+                        </details>
+                        `
+                    }
+                else
+                    {
+                        return `
+                            <ul class="brand-model">
+                                ${selectMedalItemRenderAmpResult}
+                            </ul>
+                        `
+                    }
             }
     }

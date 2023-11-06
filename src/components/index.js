@@ -6,19 +6,33 @@ module.exports = function
     }
 )
     {
-        const brandComponents = require('./brand')();
-
-        const medalComponents = require('./medal')();
-
-        const chainComponents = require('./chain')();
-
-        const ringComponents = require('./ring')();
-
         const shareComponents = require('./share')(
             {
                 cssPath: cssPath
             }
         )
+        
+        const brandComponents = require('./brand')();
+
+        const medalComponents = require('./medal')(
+            {
+                weightLabel: shareComponents.label.weightLabel
+            }
+        );
+
+        const chainComponents = require('./chain')(
+            {
+                weightLabel: shareComponents.label.weightLabel
+            }
+        );
+
+        const ringComponents = require('./ring')(
+            {
+                weightLabel: shareComponents.label.weightLabel
+            }
+        );
+
+        
 
 
         const modelComponents = require('./model')(

@@ -4,19 +4,22 @@ const buildChainSelectItemAmp = require('./src/chain-select-item-amp');
 module.exports = function
 (
     {
-        goToBrandChainModelListButton
+        goToBrandChainModelListButton,
+        weightLabel
     }
 )
     {
         const chainSelectItemAmp = buildChainSelectItemAmp(
             {
-                goToBrandChainModelListButtonAmp: goToBrandChainModelListButton.amp
+                goToBrandChainModelListButtonAmp: goToBrandChainModelListButton.amp,
+                weightLabel: weightLabel
             }
         );
 
         const chainSelectItemHtml = buildChainSelectItemHtml(
             {
-                goToBrandChainModelListButtonHtml:goToBrandChainModelListButton.html
+                goToBrandChainModelListButtonHtml:goToBrandChainModelListButton.html,
+                weightLabel: weightLabel
             }
         );
 

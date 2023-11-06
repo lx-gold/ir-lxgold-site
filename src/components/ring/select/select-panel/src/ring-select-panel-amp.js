@@ -79,10 +79,33 @@ module.exports = function buildSelectRingPanelAmp
                         selectRingItemAmpRenderResult += currentRingAmpRender;
                     }
 
-                return `
-                    <ul>
-                        ${selectRingItemAmpRenderResult}
-                    </ul>
-                `;
+                if
+                (
+                    selectedRing  
+                )
+                    {
+                        return `
+                        <details>
+                            <summary>
+                                <img
+                                    src='/statics/images/ring/${selectedRing.thumbnail_file_name}'
+                                />
+                                
+                            </summary>
+                            <ul class="brand-model">
+                                ${selectRingItemAmpRenderResult}
+                            </ul>
+                        </details>
+                        `
+                    }
+                else
+                    {
+                        return `
+                            <ul class="brand-model">
+                                ${selectRingItemAmpRenderResult}
+                            </ul>
+                        `
+                    }
+
             }
     }

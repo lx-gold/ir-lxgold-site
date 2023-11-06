@@ -1,7 +1,8 @@
 module.exports = function buildRingSelectItemHtml
 (
     {
-        goToBrandChainRingModelListHtmlButton
+        goToBrandChainRingModelListHtmlButton,
+        weightLabel
     }
 )
     {
@@ -12,6 +13,15 @@ module.exports = function buildRingSelectItemHtml
             {
                 throw new Error('buildRingSelectItemHtml must have goToBrandChainRingModelListHtmlButton');
             }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buildRingSelectItemHtml must have weightLabel');
+            }
+
         return async function ringSelectItemHtml
         (
             {
@@ -91,10 +101,24 @@ module.exports = function buildRingSelectItemHtml
                             </dd>
                             
                             <dt>
-                                عنوان
+                                عنوان فارسی
                             </dt>
                             <dd>
-                                ${ring.title_fa} - ${ring.title_en}
+                                ${ring.title_fa}
+                            </dd>
+                            
+                            <dt>
+                                عنوان انگلیسی
+                            </dt>
+                            <dd>
+                                ${ring.title_en}
+                            </dd>
+
+                            <dt>
+                                وزن
+                            </dt>
+                            <dd>
+                                ${weightLabel({weight:ring.weight})}
                             </dd>
                         </dl>
 

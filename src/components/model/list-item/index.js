@@ -4,18 +4,24 @@ const buileModelListItemAmp = require('./src/model-list-item-amp');
 module.exports = function
 (
     {
-        goToModelDetail
+        goToModelDetail,
+        priceLabel,
+        weightLabel
     }
 )
     {
         const modelListItemHtml = buileModelListItemHtml(
             {
-                goToModelDetailHtml: goToModelDetail.html
+                goToModelDetailHtml: goToModelDetail.html,
+                priceLabel:  priceLabel,
+                weightLabel: weightLabel
             }
         );
         const modelListItemAmp = buileModelListItemAmp(
             {
-                goToModelDetailAmp: goToModelDetail.amp
+                goToModelDetailAmp: goToModelDetail.amp,
+                priceLabel:  priceLabel,
+                weightLabel: weightLabel
             }
         );
 

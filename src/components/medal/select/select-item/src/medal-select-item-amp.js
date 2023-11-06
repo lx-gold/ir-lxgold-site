@@ -1,7 +1,8 @@
 module.exports = function buildMedalSelectItemAmp
 (
     {
-        goToBrandMedalModelListButtonAmp
+        goToBrandMedalModelListButtonAmp,
+        weightLabel
     }
 )
     {
@@ -11,6 +12,14 @@ module.exports = function buildMedalSelectItemAmp
         )
             {
                 throw new Error('buildMedalSelectItemAmp must have goToBrandMedalModelListButtonAmp');
+            }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buildMedalSelectItemAmp must have weightLabel');
             }
         return async function medalSelectItemAmp
         (
@@ -85,7 +94,7 @@ module.exports = function buildMedalSelectItemAmp
                                 وزن
                             </dt>
                             <dd>
-                                ${medal.weight}
+                                ${weightLabel({weight:medal.weight})}
                             </dd>
                         </dl>
 

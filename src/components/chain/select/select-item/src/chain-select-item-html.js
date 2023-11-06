@@ -1,7 +1,8 @@
 module.exports = function buildChainSelectItemHtml
 (
     {
-        goToBrandChainModelListButtonHtml
+        goToBrandChainModelListButtonHtml,
+        weightLabel
     }
 )
     {
@@ -11,6 +12,14 @@ module.exports = function buildChainSelectItemHtml
         )
             {
                 throw new Error('buildChainSelectItemHtml must have goToBrandChainModelListButtonHtml');
+            }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buildChainSelectItemHtml must have weightLabel');
             }
         return async function chainSelectItemHtml
         (
@@ -81,10 +90,24 @@ module.exports = function buildChainSelectItemHtml
                             </dd>
                             
                             <dt>
-                                عنوان
+                                عنوان فارسی
                             </dt>
                             <dd>
-                                ${chain.title_fa} - ${chain.title_en}
+                                ${chain.title_fa}
+                            </dd>
+                            
+                            <dt>
+                                عنوان انگلیسی
+                            </dt>
+                            <dd>
+                                ${chain.title_en}
+                            </dd>
+
+                            <dt>
+                                وزن
+                            </dt>
+                            <dd>
+                                ${weightLabel({weight:chain.weight})}
                             </dd>
                         </dl>
 

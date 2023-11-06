@@ -79,10 +79,32 @@ module.exports = function buildSelectRingPanelHtml
                         selectRingItemHtmlRenderResult += currentRingHtmlRender;
                     }
 
-                return `
-                    <ul class="brand-medal-chain-model-list">
-                        ${selectRingItemHtmlRenderResult}
-                    </ul>
-                `;
+                    if
+                    (
+                        selectedRing  
+                    )
+                        {
+                            return `
+                            <details>
+                                <summary>
+                                    <img
+                                        src='/statics/images/ring/${selectedRing.thumbnail_file_name}'
+                                    />
+                                    
+                                </summary>
+                                <ul class="brand-model">
+                                    ${selectRingItemHtmlRenderResult}
+                                </ul>
+                            </details>
+                            `
+                        }
+                    else
+                        {
+                            return `
+                                <ul class="brand-model">
+                                    ${selectRingItemHtmlRenderResult}
+                                </ul>
+                            `
+                        }
             }
     }

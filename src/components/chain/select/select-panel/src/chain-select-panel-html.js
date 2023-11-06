@@ -68,10 +68,32 @@ module.exports = function buildSelectChainPanelHtml
                         selectChainItemRenderHtmlResult += currentChainHtmlRender;
                     }
 
-                return `
-                    <ul class="brand-medal-model-list">
-                        ${selectChainItemRenderHtmlResult}
-                    </ul>
-                `;
+                if
+                (
+                    selectedChain  
+                )
+                    {
+                        return `
+                        <details>
+                            <summary>
+                                <img
+                                    src='/statics/images/chain/${selectedChain.thumbnail_file_name}'
+                                />
+                                
+                            </summary>
+                            <ul class="brand-model">
+                                ${selectChainItemRenderHtmlResult}
+                            </ul>
+                        </details>
+                        `
+                    }
+                else
+                    {
+                        return `
+                            <ul class="brand-model">
+                                ${selectChainItemRenderHtmlResult}
+                            </ul>
+                        `
+                    }
             }
     }

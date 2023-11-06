@@ -1,7 +1,9 @@
 module.exports = function buileModelListItemAmp
 (
     {
-        goToModelDetailAmp
+        goToModelDetailAmp,
+        priceLabel,
+        weightLabel
     }
 )
     {
@@ -11,6 +13,22 @@ module.exports = function buileModelListItemAmp
         )
             {
                 throw new Error('buileModelListItemAmp must have goToModelDetailAmp');
+            }
+
+        if
+        (
+            !priceLabel
+        )
+            {
+                throw new Error('buileModelListItemAmp must have priceLabel');
+            }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buileModelListItemAmp must have weightLabel');
             }
         return async function modelListItemAmp
         (

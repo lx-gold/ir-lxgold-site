@@ -1,7 +1,10 @@
 module.exports = function buileModelListItemHtml
 (
     {
-        goToModelDetailHtml
+        goToModelDetailHtml,
+        priceLabel,
+        weightLabel
+
     }
 )
     {
@@ -11,6 +14,22 @@ module.exports = function buileModelListItemHtml
         )
             {
                 throw new Error('buileModelListItemHtml must have goToModelDetailHtml');
+            }
+
+        if
+        (
+            !priceLabel
+        )
+            {
+                throw new Error('buileModelListItemHtml must have priceLabel');
+            }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buileModelListItemHtml must have weightLabel');
             }
         return async function modelListItemHtml
         (
@@ -79,14 +98,14 @@ module.exports = function buileModelListItemHtml
                                 قیمت
                             </dt>
                             <dd>
-                                ${model.price}
+                                ${priceLabel({price: model.price})}
                             </dd>
 
                             <dt>
                                 وزن
                             </dt>
                             <dd>
-                                ${model.weight}
+                                ${weightLabel({weight:model.weight})}
                             </dd>
 
                         </dl>

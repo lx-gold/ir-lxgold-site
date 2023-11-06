@@ -1,7 +1,8 @@
 module.exports = function buildChainSelectItemAmp
 (
     {
-        goToBrandChainModelListButtonAmp
+        goToBrandChainModelListButtonAmp,
+        weightLabel
     }
 )
     {
@@ -11,6 +12,14 @@ module.exports = function buildChainSelectItemAmp
         )
             {
                 throw new Error('buildChainSelectItemAmp must have goToBrandChainModelListButtonAmp');
+            }
+
+        if
+        (
+            !weightLabel
+        )
+            {
+                throw new Error('buildChainSelectItemAmp must have weightLabel');
             }
         return async function chainSelectItemAmp
         (
@@ -81,10 +90,24 @@ module.exports = function buildChainSelectItemAmp
                             </dd>
                             
                             <dt>
-                                عنوان
+                                عنوان فارسی
                             </dt>
                             <dd>
-                                ${chain.title_fa} - ${chain.title_en}
+                                ${chain.title_fa}
+                            </dd>
+                            
+                            <dt>
+                                عنوان انگلیسی
+                            </dt>
+                            <dd>
+                                ${chain.title_en}
+                            </dd>
+
+                            <dt>
+                                وزن
+                            </dt>
+                            <dd>
+                                ${weightLabel({weight:chain.weight})}
                             </dd>
                         </dl>
 

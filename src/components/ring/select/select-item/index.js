@@ -4,19 +4,22 @@ const buildRingSelectItemAmp = require('./src/ring-select-item-amp');
 module.exports = function
 (
     {
-        goToBrandChainRingModelListButton
+        goToBrandChainRingModelListButton,
+        weightLabel
     }
 )
     {
         const ringSelectItemHtml = buildRingSelectItemHtml(
             {
-                goToBrandChainRingModelListHtmlButton: goToBrandChainRingModelListButton.html
+                goToBrandChainRingModelListHtmlButton: goToBrandChainRingModelListButton.html,
+                weightLabel: weightLabel
             }
         );
 
         const ringSelectItemAmp = buildRingSelectItemAmp(
             {
-                goToBrandChainRingModelListAmpButton: goToBrandChainRingModelListButton.amp
+                goToBrandChainRingModelListAmpButton: goToBrandChainRingModelListButton.amp,
+                weightLabel: weightLabel
             }
         );
 

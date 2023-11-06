@@ -22,7 +22,9 @@ module.exports = function
 
         const modelListItem = require('./list-item')(
             {
-                goToModelDetail: goToModelDetail
+                goToModelDetail: goToModelDetail,
+                priceLabel: priceLabel,
+                weightLabel:weightLabel
             }
         )
 

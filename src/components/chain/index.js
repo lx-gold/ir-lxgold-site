@@ -1,11 +1,16 @@
 module.exports = function
-()
+(
+    {
+        weightLabel
+    }
+)
     {
         const goToBrandChainModelListButton = require('./go-to-brand-chain-model-list')();
 
         const selectChain = require('./select')(
             {
-                goToBrandChainModelListButton: goToBrandChainModelListButton
+                goToBrandChainModelListButton: goToBrandChainModelListButton,
+                weightLabel: weightLabel
             }
         );
 

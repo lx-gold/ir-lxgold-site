@@ -47,9 +47,32 @@ module.exports = function buildSelectBrandPanelAmp
                     selectBrandItemAmpRenderResult += currentBrandAmpRender;
                 }
 
-                return `
-                <ul>
-                    ${selectBrandItemAmpRenderResult}
-                </ul>`
+                if
+                (
+                    selectedBrand  
+                )
+                    {
+                        return `
+                        <details>
+                            <summary>
+                                <img
+                                    src = '/statics/images/brand/${selectedBrand.logo_file_name}'
+                                />
+                                
+                            </summary>
+                            <ul class="brand-select-panel">
+                                ${selectBrandItemAmpRenderResult}
+                            </ul>
+                        </details>
+                        `
+                    }
+                else
+                    {
+                        return `
+                            <ul class="brand-select-panel">
+                                ${selectBrandItemAmpRenderResult}
+                            </ul>
+                        `
+                    }
             }
     }

@@ -78,7 +78,7 @@ module.exports = function buildIndexGenerator
                             ${headerContent}
                             <main>
                                 <h1>
-                                    جاسونیچی طلا
+                                جاسوئیچی طلا
                                 </h1>
                                 ${modelPanleContent}
                             </main>
