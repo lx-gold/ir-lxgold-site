@@ -128,7 +128,20 @@ module.exports = function buildModelBrandMedalPanelAmp
                 );
 
                 
-                const content = selectBrandAmpContent + selectMedalAmpContent + selectChainAmpContent+ modelListAmpContent;
+                const content = `
+                <nav>
+                    <ul>
+                        <li>
+                            ${selectBrandAmpContent}
+                        </li>
+                        <li>
+                            ${selectMedalAmpContent}
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </nav>
+                `+ selectChainAmpContent + modelListAmpContent;
 
                 return content;
 

@@ -159,8 +159,23 @@ module.exports = function buildModelBrandMedalChainPanelHtml
                     }
                 );
 
-
-                const content = selectBrandHtmlContent + selectMedalHtmlContent+ selectChainHtmlContent + selectRingHtmlContent + modelListHtmlContent;
+                
+                const content = `
+                    <nav>
+                        <ul>
+                            <li>
+                                ${selectBrandHtmlContent}
+                            </li>
+                            <li>
+                                ${selectMedalHtmlContent}
+                            </li>
+                            <li>
+                                ${selectChainHtmlContent}
+                            </li>
+                            <li></li>
+                        </ul>
+                    </nav>
+                    `+ selectRingHtmlContent + modelListHtmlContent;
 
                 return content;
 

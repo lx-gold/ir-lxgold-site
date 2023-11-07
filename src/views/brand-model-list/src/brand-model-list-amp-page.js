@@ -98,6 +98,8 @@ module.exports = function buildBrandModelListAmpPage
                         medalList: medalList
                     }
                 );
+
+                const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa}`
                 
                 return `
                     <!doctype html>
@@ -126,7 +128,7 @@ module.exports = function buildBrandModelListAmpPage
                             </amp-analytics>
                             <main>
                                 <h1>
-                                    جاسونیچی طلا
+                                    ${h1Content}
                                 </h1>
                                 ${modelPanleAmpContent}
                             </main>

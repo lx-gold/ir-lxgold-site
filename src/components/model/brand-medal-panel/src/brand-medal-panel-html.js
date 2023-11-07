@@ -128,7 +128,20 @@ module.exports = function buildModelBrandMedalPanelHtml
                 );
 
                 
-                const content = selectBrandHtmlContent + selectMedalHtmlContent + selectChainHtmlContent+ modelListHtmlContent;
+                const content =  `
+                    <nav>
+                        <ul>
+                            <li>
+                                ${selectBrandHtmlContent}
+                            </li>
+                            <li>
+                                ${selectMedalHtmlContent}
+                            </li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </nav>
+                    `+ selectChainHtmlContent + modelListHtmlContent;
 
                 return content;
 

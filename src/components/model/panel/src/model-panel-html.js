@@ -57,7 +57,16 @@ module.exports = function buildModelPanelHtml
                 );
 
                 
-                const htmlcontent = selectBrandHtmlContent + modelListHtmlContent;
+                const htmlcontent = `
+                    <nav>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </nav>
+                    `+ selectBrandHtmlContent + modelListHtmlContent;
 
                 return htmlcontent;
 

@@ -57,7 +57,16 @@ module.exports = function buildModelPanelAmp
                 );
 
                 
-                const ampContent = selectBrandAmpContent + modelListAmpContent;
+                const ampContent = `
+                    <nav>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </nav>
+                    `+ selectBrandAmpContent + modelListAmpContent;
 
                 return ampContent;
                 
