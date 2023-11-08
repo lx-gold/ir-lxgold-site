@@ -128,6 +128,8 @@ module.exports = function buildBrandMedalChainModelListHtmlPage
                         ringList: ringList
                     }
                 );
+
+                const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa} مدل ${selectedMedal.title_fa} با زنجیر ${selectedChain.title_fa}`
                 
                 return `
                     <!doctype html>
@@ -138,7 +140,7 @@ module.exports = function buildBrandMedalChainModelListHtmlPage
                         <body>
                             <main>
                                 <h1>
-                                    جاسونیچی طلا
+                                    ${h1Content}
                                 </h1>
                                 ${modelBrandMedalChainPanelHtmlContent}
                             </main>

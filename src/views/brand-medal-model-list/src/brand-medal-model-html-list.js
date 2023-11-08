@@ -105,6 +105,8 @@ module.exports = function buildBrandMedalModelListHtmlPage
                         modelList: modelList,
                     }
                 );
+
+                const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa} مدل ${medal.title_fa}`
                 
                 return `
                     <!doctype html>
@@ -115,7 +117,7 @@ module.exports = function buildBrandMedalModelListHtmlPage
                         <body>
                             <main>
                                 <h1>
-                                    جاسونیچی طلا
+                                    ${h1Content}
                                 </h1>
                                 ${modelMedalPanleHtmlContent}
                             </main>
