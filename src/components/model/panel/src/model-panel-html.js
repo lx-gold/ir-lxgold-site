@@ -58,7 +58,7 @@ module.exports = function buildModelPanelHtml
 
                 
                 const htmlcontent = `
-                    <nav>
+                    <nav class="panel-navigation">
                         <ul>
                             <li></li>
                             <li></li>

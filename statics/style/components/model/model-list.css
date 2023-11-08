@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .model-list {
   background-color: #fff;
   padding: 24px 16px;
@@ -55,6 +56,21 @@
 }
 .model-list li dl dd img {
   width: 100%;
+}
+.model-list li dl dd small,
+.model-list li dl dd b {
+  color: #0d0d0d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+.model-list li dl dd small {
+  margin-right: 4px;
+}
+.model-list li dl dd small::before {
+  content: "±";
+  margin-left: 4px;
 }
 .model-list li a {
   border-radius: 39px;

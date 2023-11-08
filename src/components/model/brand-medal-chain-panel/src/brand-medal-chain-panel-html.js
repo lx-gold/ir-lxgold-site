@@ -161,7 +161,7 @@ module.exports = function buildModelBrandMedalChainPanelHtml
 
                 
                 const content = `
-                    <nav>
+                    <nav class="panel-navigation">
                         <ul>
                             <li>
                                 ${selectBrandHtmlContent}

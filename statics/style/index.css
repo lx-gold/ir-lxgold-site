@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: IranSans;
   font-style: normal;
@@ -171,6 +172,21 @@ dl {
 .model-list li dl dd img {
   width: 100%;
 }
+.model-list li dl dd small,
+.model-list li dl dd b {
+  color: #0d0d0d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+.model-list li dl dd small {
+  margin-right: 4px;
+}
+.model-list li dl dd small::before {
+  content: "±";
+  margin-left: 4px;
+}
 .model-list li a {
   border-radius: 39px;
   background: #d5b25d;
@@ -195,4 +211,125 @@ dl {
   position: absolute;
   right: 0;
   bottom: 64px;
+}
+
+.panel-navigation {
+  background-color: #fff;
+  padding: 8px 8px 38px 8px;
+}
+.panel-navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8px;
+}
+.panel-navigation ul li:empty {
+  background-color: #fbf8ef;
+}
+.panel-navigation ul li:empty:nth-child(1) {
+  background-image: url("../images/panel/tag.svg");
+}
+.panel-navigation ul li:empty:nth-child(2) {
+  background-image: url("../images/panel/link.svg");
+}
+.panel-navigation ul li:empty:nth-child(3) {
+  background-image: url("../images/panel/badge.svg");
+}
+.panel-navigation ul li:empty:nth-child(4) {
+  background-image: url("../images/panel/circle-triangle.svg");
+}
+.panel-navigation ul li {
+  border-radius: 50%;
+  border: 1px solid #e6e5e5;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel-navigation ul li summary {
+  width: 80px;
+  height: 60px;
+  display: flex;
+}
+.panel-navigation ul li summary img {
+  width: 100%;
+  border-radius: 50%;
+}
+.panel-navigation ul li:nth-child(1)::after {
+  content: "برند";
+}
+.panel-navigation ul li:nth-child(2)::after {
+  content: "مدال";
+}
+.panel-navigation ul li:nth-child(3)::after {
+  content: "زنجیر";
+}
+.panel-navigation ul li:nth-child(4)::after {
+  content: "حلقه";
+}
+.panel-navigation ul li::after {
+  position: absolute;
+  bottom: -30px;
+  right: 20px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+.panel-navigation details {
+  position: relative;
+}
+.panel-navigation details ul {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  width: 340px;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: 1px solid #e6e5e5;
+  padding: 8px;
+  top: 72px;
+}
+.panel-navigation details ul li {
+  border: none;
+}
+.panel-navigation details ul li dl dt {
+  display: none;
+}
+.panel-navigation details ul li dl dd {
+  display: none;
+}
+.panel-navigation details ul li dl dd:nth-child(2) {
+  display: block;
+}
+.panel-navigation details ul li dl dd:nth-child(2) img {
+  width: 50px;
+  height: 50px;
+}
+.panel-navigation details ul li ul {
+  display: none;
+}
+.panel-navigation details ul li::after {
+  content: "" !important;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+  content: "";
+}
+
+.panel-navigation ul li:nth-child(1)::before {
+  content: "";
+  height: 3px;
+  width: 120%;
+  background-color: #d5b25d;
+  position: absolute;
+  bottom: -40px;
 }/*# sourceMappingURL=index.css.map */
