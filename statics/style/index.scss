@@ -1,3 +1,20 @@
 @import "main";
 @import "components/brand/brand-select-item";
 @import "components/model/model-list";
+@import "panel-navigation";
+.panel-navigation {
+  ul {
+    li {
+      &:nth-child(1) {
+        &::before {
+          content: "";
+          height: 3px;
+          width: 120%;
+          background-color: #d5b25d;
+          position: absolute;
+          bottom: -40px;
+        }
+      }
+    }
+  }
+}

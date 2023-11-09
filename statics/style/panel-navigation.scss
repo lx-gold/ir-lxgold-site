@@ -1,0 +1,122 @@
+.panel-navigation {
+  background-color: #fff;
+  padding: 8px 8px 38px 8px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+    li:empty {
+      background-color: #fbf8ef;
+
+      &:nth-child(1) {
+        background-image: url("../images/panel/tag.svg");
+      }
+      &:nth-child(2) {
+        background-image: url("../images/panel/link.svg");
+      }
+      &:nth-child(3) {
+        background-image: url("../images/panel/badge.svg");
+      }
+      &:nth-child(4) {
+        background-image: url("../images/panel/circle-triangle.svg");
+      }
+    }
+    li {
+      border-radius: 50%;
+      border: 1px solid #e6e5e5;
+      width: 64px;
+      height: 64px;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      summary {
+        width: 80px;
+        height: 60px;
+        display: flex;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      &:nth-child(1) {
+        &::after {
+          content: "برند";
+        }
+      }
+      &:nth-child(2) {
+        &::after {
+          content: "مدال";
+        }
+      }
+      &:nth-child(3) {
+        &::after {
+          content: "زنجیر";
+        }
+      }
+      &:nth-child(4) {
+        &::after {
+          content: "حلقه";
+        }
+      }
+      &::after {
+        position: absolute;
+        bottom: -30px;
+        right: 20px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+  details {
+    position: relative;
+    ul {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 2;
+      width: 340px;
+      align-items: flex-start;
+      border-radius: 8px;
+      border: 1px solid #e6e5e5;
+      padding: 8px;
+      top: 72px;
+      li {
+        border: none;
+        dl {
+          dt {
+            display: none;
+          }
+          dd {
+            display: none;
+            &:nth-child(2) {
+              display: block;
+              img {
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+        }
+        ul {
+          display: none;
+        }
+        &::after {
+          content: "" !important;
+        }
+      }
+    }
+  }
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+  content: "";
+}
