@@ -4,20 +4,19 @@
 @import "components/model/brand-panel";
 @import "panel-navigation";
 
-  .panel-navigation {
-    ul {
-      li {
-        &:nth-child(2) {
-          &::before {
-            content: "";
-            height: 3px;
-            width: 120%;
-            background-color: #d5b25d;
-            position: absolute;
-            bottom: -40px;
-          }
+.panel-navigation {
+  ul {
+    li {
+      &:nth-child(2) {
+        &::before {
+          content: "";
+          height: 3px;
+          width: 120%;
+          background-color: #d5b25d;
+          position: absolute;
+          bottom: -40px;
         }
       }
     }
   }
-  
+}

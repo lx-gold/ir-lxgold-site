@@ -57,6 +57,11 @@
 }
 
 .panel-navigation {
+  details{
+    ul{
+      top: 180px;
+    }
+  }
   ul {
     li {
       &:nth-child(3) {
