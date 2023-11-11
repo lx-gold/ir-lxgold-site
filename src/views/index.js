@@ -12,7 +12,8 @@ module.exports = function
         minifyCss,
         modelLdJson,
         modelWebPageLdJson,
-        siteMapListRender
+        siteMapListRender,
+        header
     }
 )
     {
@@ -21,7 +22,8 @@ module.exports = function
             {
                 headTag: headTag,
                 modelPanelRender: modelPanelRender,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                header: header
             }
         );
 

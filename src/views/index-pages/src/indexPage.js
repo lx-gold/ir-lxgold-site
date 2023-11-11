@@ -2,7 +2,8 @@ module.exports = function buildIndexGenerator
 (
     {
         headTag,
-        modelPanelRender
+        modelPanelRender,
+        headerHtml
     }
 )
     {
@@ -20,6 +21,14 @@ module.exports = function buildIndexGenerator
         )
             {
                 throw new Error('buildIndexGenerator must have modelPanelRender')
+            }
+
+        if
+        (
+            !headerHtml
+        )
+            {
+                throw new Error('buildIndexGenerator must have headerHtml')
             }
 
         const keywordList = [
@@ -64,7 +73,7 @@ module.exports = function buildIndexGenerator
                     }
                 );
 
-                const headerContent = '';
+                const headerContent = headerHtml();
             
                 const footerContent = '';
 

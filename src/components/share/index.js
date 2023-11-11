@@ -1,3 +1,5 @@
+const buildHeader = require('./header/src/header-html');
+
 module.exports = function
 (
     {
@@ -18,13 +20,16 @@ module.exports = function
 
         const label = require('./label')();
 
+        const header = require('./header')()
+
 
         const services = Object.freeze(
             {
                 headTag: headTag,
                 ldJson: ldJson,
                 siteMap: siteMap,
-                label: label
+                label: label,
+                header: header
             }
         );
 

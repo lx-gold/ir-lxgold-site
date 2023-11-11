@@ -3,7 +3,8 @@ module.exports = function buildIndexAmpGenerator
     {
         headAmpTag,
         modelPanelRender,
-        minifyCss
+        minifyCss,
+        headerAmp
     }
 )
     {
@@ -30,6 +31,16 @@ module.exports = function buildIndexAmpGenerator
             {
                 throw new Error('buildIndexAmpGenerator must have minifyCss')
             }
+
+        if
+        (
+            !headerAmp
+        )
+            {
+                throw new Error('buildIndexAmpGenerator must have headerAmp')
+            }
+
+            
 
 
         const keywordList = [
@@ -80,7 +91,7 @@ module.exports = function buildIndexAmpGenerator
                     }
                 );
 
-                const headerContent = '';
+                const headerContent = headerAmp();
             
                 const footerContent = '';
 

@@ -101,9 +101,7 @@ module.exports = function buildHeadAmphtmlTag
 
                 else
                     {
-                        const result = `لوکس گلد | خرید آنلان جاسوئیچی طلا انواع ماشین ها`;
-
-                        return result;
+                        url = `${domain}`;
                     }
 
 

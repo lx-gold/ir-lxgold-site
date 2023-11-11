@@ -6,14 +6,16 @@ module.exports = function
     {
         headTag,
         modelPanelRender,
-        minifyCss
+        minifyCss,
+        header
     }
 )
     {
         const indexHtmlGenerator = buildIndexGenerator(
             {
                 headTag: headTag.html,
-                modelPanelRender:modelPanelRender.html
+                modelPanelRender:modelPanelRender.html,
+                headerHtml: header.html
             }
         );
 
@@ -21,7 +23,8 @@ module.exports = function
             {
                 headAmpTag: headTag.amp,
                 modelPanelRender:modelPanelRender.amp,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                headerAmp: header.amp
             }
         )
 

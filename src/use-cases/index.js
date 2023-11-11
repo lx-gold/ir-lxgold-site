@@ -42,7 +42,8 @@ module.exports = function
                 modelLdJson: components.model.modelProductLdJson,
                 modelWebPageLdJson: components.model.modelWebPageLdJson,
                 modelDescriptionRender: components.model.modelDescription,
-                siteMapListRender: components.share.siteMap
+                siteMapListRender: components.share.siteMap,
+                header: components.share.header
             }
         );
         
