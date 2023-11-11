@@ -4,6 +4,11 @@
 
 .panel-navigation {
   margin-bottom: 12px;
+  details{
+    ul{
+      top: 230px;
+    }
+  }
   ul {
     li {
       &:nth-child(3) {

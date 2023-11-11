@@ -78,7 +78,6 @@
     ul {
       background-color: #fff;
       display: flex;
-      flex-direction: column;
       position: absolute;
       z-index: 2;
       width: 340px;
@@ -86,9 +85,18 @@
       border-radius: 8px;
       border: 1px solid #e6e5e5;
       padding: 8px;
-      top: 72px;
+      top: 130px;
+      overflow-y: hidden;
+      right: 16px;
       li {
         border: none;
+        border-radius: unset;
+        background: none;
+        box-shadow: none;
+        height: fit-content;
+        width: fit-content;
+        padding: 0;
+        flex: 0 0 25%;
         dl {
           dt {
             display: none;
@@ -98,10 +106,11 @@
             &:nth-child(2) {
               display: block;
               img {
-                width: 50px;
-                height: 50px;
+                width: 74px;
+                height: 64px;
               }
             }
+            height: 64px !important;
           }
         }
         ul {
@@ -113,6 +122,13 @@
       }
     }
   }
+}
+
+li:has(> details[open]) {
+  position: unset;
+}
+details[open] {
+  position: unset;
 }
 
 details summary::-webkit-details-marker,
