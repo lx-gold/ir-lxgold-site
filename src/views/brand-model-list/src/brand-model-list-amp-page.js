@@ -3,7 +3,8 @@ module.exports = function buildBrandModelListAmpPage
     {
         headAmpTag,
         modelBrandPanelAmpRender,
-        minifyCss
+        minifyCss,
+        headerAmp
     }
 )
     {
@@ -29,6 +30,14 @@ module.exports = function buildBrandModelListAmpPage
         )
             {
                 throw new Error('buildBrandModelListAmpPage must have minifyCss')
+            }
+
+        if
+        (
+            !headerAmp
+        )
+            {
+                throw new Error('buildBrandModelListAmpPage must have headerAmp')
             }
         
         const keywordList = [
@@ -99,6 +108,8 @@ module.exports = function buildBrandModelListAmpPage
                     }
                 );
 
+                const headerContent = headerAmp()
+
                 const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa}`
                 
                 return `
@@ -126,6 +137,7 @@ module.exports = function buildBrandModelListAmpPage
                                 }
                                 </script>
                             </amp-analytics>
+                            ${headerContent}
                             <main>
                                 <h1>
                                     ${h1Content}

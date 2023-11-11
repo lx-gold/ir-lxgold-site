@@ -34,7 +34,8 @@ module.exports = function
             {
                 headTag: headTag,
                 modelBrandPanelRender: modelBrandPanelRender,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                header: header
             }
         );
 
@@ -43,7 +44,8 @@ module.exports = function
             {
                 headTag: headTag,
                 modelBrandMedalPanelRender: modelBrandMedalPanelRender,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                header: header
             }
         )
 
@@ -51,7 +53,8 @@ module.exports = function
             {
                 headTag: headTag,
                 modelBrandMedalChainPanelRender: modelBrandMedalChainPanelRender,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                header: header
             }
         );
 
@@ -59,7 +62,8 @@ module.exports = function
             {
                 headTag: headTag,
                 modelBrandMedalChainRingPanelRender: modelBrandMedalChainRingPanelRender,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                header: header
             }
         );
 

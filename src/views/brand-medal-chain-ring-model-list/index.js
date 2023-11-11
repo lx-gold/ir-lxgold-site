@@ -7,14 +7,16 @@ module.exports = function
     {
         headTag,
         modelBrandMedalChainRingPanelRender,
-        minifyCss
+        minifyCss,
+        header
     }
 )
     {
         const brandMedalChainRingModelListHtmlPage = buildBrandMedalChainRingModelListHtmlPage(
             {
                 headTag: headTag.html,
-                modelBrandMedalChainRingPanelHtmlRender: modelBrandMedalChainRingPanelRender.html
+                modelBrandMedalChainRingPanelHtmlRender: modelBrandMedalChainRingPanelRender.html,
+                headerHtml: header.html
             }
         );
 
@@ -22,7 +24,8 @@ module.exports = function
             {
                 headAmpTag: headTag.amp,
                 modelBrandMedalChainRingPanelAmpRender: modelBrandMedalChainRingPanelRender.amp,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                headerAmp: header.amp
             }
         )
 

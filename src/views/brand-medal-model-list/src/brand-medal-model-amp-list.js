@@ -3,7 +3,8 @@ module.exports = function buildBrandMedalModelListAmpPage
     {
         headAmpTag,
         modelBrandMedalPanelAmpRender,
-        minifyCss
+        minifyCss,
+        headerAmp
     }
 )
     {
@@ -30,6 +31,15 @@ module.exports = function buildBrandMedalModelListAmpPage
             {
                 throw new Error('buildBrandMedalModelListAmpPage must have minifyCss')
             }
+
+        if
+        (
+            !headerAmp
+        )
+            {
+                throw new Error('buildBrandMedalModelListAmpPage must have headerAmp')
+            }
+    
 
         const keywordList = [
             `جاسوئیچی طلا`
@@ -121,6 +131,8 @@ module.exports = function buildBrandMedalModelListAmpPage
                     }
                 );
 
+                const headerContent = headerAmp();
+
                 const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa} مدل ${medal.title_fa}`
                 
                 return `
@@ -148,6 +160,7 @@ module.exports = function buildBrandMedalModelListAmpPage
                                 }
                                 </script>
                             </amp-analytics>
+                            ${headerContent}
                             <main>
                                 <h1>
                                     ${h1Content}

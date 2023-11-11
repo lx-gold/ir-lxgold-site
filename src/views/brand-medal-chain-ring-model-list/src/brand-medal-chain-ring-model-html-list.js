@@ -2,7 +2,8 @@ module.exports = function buildBrandMedalChainRingModelListHtmlPage
 (
     {
         headTag,
-        modelBrandMedalChainRingPanelHtmlRender
+        modelBrandMedalChainRingPanelHtmlRender,
+        headerHtml
     }
 )
     {
@@ -21,6 +22,16 @@ module.exports = function buildBrandMedalChainRingModelListHtmlPage
             {
                 throw new Error('buildBrandMedalChainRingModelListHtmlPage must have modelBrandMedalChainRingPanelHtmlRender')
             }
+
+        if
+        (
+            !headerHtml
+        )
+            {
+                throw new Error('buildBrandMedalChainRingModelListHtmlPage must have headerHtml')
+            }
+
+            
 
         const keywordList = [
             `جاسوئیچی طلا`
@@ -141,6 +152,8 @@ module.exports = function buildBrandMedalChainRingModelListHtmlPage
                     }
                 );
 
+                const headerContent = headerHtml();
+
                 const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa} مدل ${selectedMedal.title_fa} با زنجیر ${selectedChain.title_fa} و حلقه ی ${selectedRing.title_fa}`
                 
                 return `
@@ -150,6 +163,7 @@ module.exports = function buildBrandMedalChainRingModelListHtmlPage
                             ${headContent}
                         </head>
                         <body>
+                            ${headerContent}
                             <main>
                                 <h1>
                                     ${h1Content}

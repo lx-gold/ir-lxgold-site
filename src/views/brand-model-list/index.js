@@ -6,14 +6,16 @@ module.exports = function
     {
         headTag,
         modelBrandPanelRender,
-        minifyCss
+        minifyCss,
+        header
     }
 )
     {
         const brandModelListHtmlPage = buildBrandModelListHtmlPage(
             {
                 headTag: headTag.html,
-                modelBrandPanelHtmlRender: modelBrandPanelRender.html
+                modelBrandPanelHtmlRender: modelBrandPanelRender.html,
+                headerHtml:header.html
             }
         );
 
@@ -21,7 +23,8 @@ module.exports = function
             {
                 headAmpTag: headTag.amp,
                 modelBrandPanelAmpRender: modelBrandPanelRender.amp,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                headerAmp:header.amp
             }
         )
 

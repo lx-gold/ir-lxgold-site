@@ -3,7 +3,8 @@ module.exports = function buildBrandMedalChainRingModelListAmpPage
     {
         headAmpTag,
         modelBrandMedalChainRingPanelAmpRender,
-        minifyCss
+        minifyCss,
+        headerAmp
     }
 )
     {
@@ -29,6 +30,15 @@ module.exports = function buildBrandMedalChainRingModelListAmpPage
         )
             {
                 throw new Error('buildBrandMedalChainRingModelListAmpPage must have minifyCss')
+            }
+
+            
+        if
+        (
+            !headerAmp
+        )
+            {
+                throw new Error('buildBrandMedalChainRingModelListAmpPage must have headerAmp')
             }
 
         
@@ -156,6 +166,8 @@ module.exports = function buildBrandMedalChainRingModelListAmpPage
                     }
                 );
 
+                const headerContent = headerAmp();
+
                 const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa} مدل ${selectedMedal.title_fa} با زنجیر ${selectedChain.title_fa} و حلقه ی ${selectedRing.title_fa}`
                 
                 return `
@@ -183,6 +195,7 @@ module.exports = function buildBrandMedalChainRingModelListAmpPage
                                 }
                                 </script>
                             </amp-analytics>
+                            ${headerContent}
                             <main>
                                 <h1>
                                     ${h1Content}

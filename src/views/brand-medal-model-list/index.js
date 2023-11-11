@@ -6,14 +6,16 @@ module.exports = function
     {
         headTag,
         modelBrandMedalPanelRender,
-        minifyCss
+        minifyCss,
+        header
     }
 )
     {
         const brandMedalModelListHtmlPage = buildBrandMedalModelListHtmlPage(
             {
                 headTag: headTag.html,
-                modelBrandMedalPanelHtmlRender: modelBrandMedalPanelRender.html
+                modelBrandMedalPanelHtmlRender: modelBrandMedalPanelRender.html,
+                headerHtml: header.html
             }
         );
 
@@ -21,7 +23,8 @@ module.exports = function
             {
                 headAmpTag: headTag.amp,
                 modelBrandMedalPanelAmpRender: modelBrandMedalPanelRender.amp,
-                minifyCss: minifyCss
+                minifyCss: minifyCss,
+                headerAmp: header.amp
             }
         )
 

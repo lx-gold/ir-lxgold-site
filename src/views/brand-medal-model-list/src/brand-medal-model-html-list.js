@@ -2,7 +2,8 @@ module.exports = function buildBrandMedalModelListHtmlPage
 (
     {
         headTag,
-        modelBrandMedalPanelHtmlRender
+        modelBrandMedalPanelHtmlRender,
+        headerHtml
     }
 )
     {
@@ -21,7 +22,16 @@ module.exports = function buildBrandMedalModelListHtmlPage
             {
                 throw new Error('buildBrandMedalModelListHtmlPage must have modelBrandMedalPanelHtmlRender')
             }
+        
+        if
+        (
+            !headerHtml
+        )
+            {
+                throw new Error('buildBrandMedalModelListHtmlPage must have headerHtml')
+            }
 
+            
         const keywordList = [
             `جاسوئیچی طلا`
         ];
@@ -106,6 +116,8 @@ module.exports = function buildBrandMedalModelListHtmlPage
                     }
                 );
 
+                const headerContent = headerHtml();
+
                 const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa} مدل ${medal.title_fa}`
                 
                 return `
@@ -115,6 +127,7 @@ module.exports = function buildBrandMedalModelListHtmlPage
                             ${headContent}
                         </head>
                         <body>
+                            ${headerContent}
                             <main>
                                 <h1>
                                     ${h1Content}

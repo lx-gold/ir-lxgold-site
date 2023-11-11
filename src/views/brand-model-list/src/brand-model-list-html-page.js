@@ -2,7 +2,8 @@ module.exports = function buildBrandModelListHtmlPage
 (
     {
         headTag,
-        modelBrandPanelHtmlRender
+        modelBrandPanelHtmlRender,
+        headerHtml
     }
 )
     {
@@ -21,6 +22,16 @@ module.exports = function buildBrandModelListHtmlPage
             {
                 throw new Error('buildBrandModelListHtmlPage must have modelBrandPanelHtmlRender')
             }
+
+        if
+        (
+            !headerHtml
+        )
+            {
+                throw new Error('buildBrandModelListHtmlPage must have headerHtml')
+            }
+
+            
         
         const keywordList = [
             `جاسوئیچی طلا`
@@ -85,6 +96,8 @@ module.exports = function buildBrandModelListHtmlPage
                     }
                 );
 
+                const headerContent = headerHtml();
+
                 const h1Content = `جاسوئیچی طلا ${selectedBrand.title_fa}`
                 
                 return `
@@ -94,6 +107,7 @@ module.exports = function buildBrandModelListHtmlPage
                             ${headContent}
                         </head>
                         <body>
+                            ${headerContent}
                             <main>
                                 <h1>
                                     ${h1Content}
