@@ -1,12 +1,13 @@
 @import "main";
 @import "components/model/model-list";
+@import "components/share/header";
 @import "panel-navigation";
 
 .panel-navigation {
   margin-bottom: 12px;
   details{
     ul{
-      top: 230px;
+      top: 260px;
     }
   }
   ul {

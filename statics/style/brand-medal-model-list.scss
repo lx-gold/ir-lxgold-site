@@ -1,5 +1,6 @@
 @import "main";
 @import "components/brand/brand-select-item";
+@import "components/share/header";
 @import "components/model/model-list";
 @import "components/model/brand-panel";
 @import "panel-navigation";
@@ -57,9 +58,13 @@
   }
 }
 
-
 .panel-navigation {
   ul {
+    details {
+      ul {
+        top: 215px;
+      }
+    }
     li {
       &:nth-child(3) {
         &::before {

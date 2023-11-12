@@ -1,6 +1,7 @@
 @import "main";
 @import "components/model/brand-panel";
 @import "panel-navigation";
+@import "components/share/header";
 @import "components/model/model-list";
 
 .brand-medal-chain-model-list {
@@ -57,9 +58,9 @@
 }
 
 .panel-navigation {
-  details{
-    ul{
-      top: 180px;
+  details {
+    ul {
+      top: 260px;
     }
   }
   ul {
