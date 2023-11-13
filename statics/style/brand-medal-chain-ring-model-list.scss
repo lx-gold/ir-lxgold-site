@@ -2,15 +2,13 @@
 @import "components/model/model-list";
 @import "components/share/header";
 @import "panel-navigation";
+@import "components/brand/brand-select-item";
+@import "components/model/brand-panel";
+
 
 .panel-navigation {
   margin-bottom: 12px;
-  details{
-    ul{
-      top: 260px;
-    }
-  }
-  ul {
+  .panel-navigation-list {
     li {
       &:nth-child(3) {
         summary {
@@ -18,19 +16,17 @@
           height: 59px;
         }
       }
-      &:nth-child(4) {
+      &:nth-child(4),
+      &:nth-child(3) {
         summary {
           width: 59px;
           height: 59px;
+          &::before,
+          &::after{
+            left: 20px;
+          }
         }
-        &::before {
-          content: "";
-          height: 3px;
-          width: 120%;
-          background-color: #d5b25d;
-          position: absolute;
-          bottom: -40px;
-        }
+  
       }
     }
   }

@@ -367,30 +367,31 @@ header ul li details[open] ol li {
 
 .panel-navigation {
   background-color: #fff;
-  padding: 8px 8px 38px 8px;
+  padding: 8px 8px 50px 8px;
+  position: relative;
 }
-.panel-navigation ul {
+.panel-navigation .panel-navigation-list {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 8px;
 }
-.panel-navigation ul li:empty {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty {
   background-color: #fbf8ef;
 }
-.panel-navigation ul li:empty:nth-child(1) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(1) {
   background-image: url("../images/panel/tag.svg");
 }
-.panel-navigation ul li:empty:nth-child(2) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(2) {
   background-image: url("../images/panel/link.svg");
 }
-.panel-navigation ul li:empty:nth-child(3) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(3) {
   background-image: url("../images/panel/badge.svg");
 }
-.panel-navigation ul li:empty:nth-child(4) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(4) {
   background-image: url("../images/panel/circle-triangle.svg");
 }
-.panel-navigation ul li {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item {
   border-radius: 50%;
   border: 1px solid #e6e5e5;
   width: 64px;
@@ -402,28 +403,37 @@ header ul li details[open] ol li {
   justify-content: center;
   align-items: center;
 }
-.panel-navigation ul li summary {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item summary {
   width: 80px;
   height: 60px;
   display: flex;
 }
-.panel-navigation ul li summary img {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item summary::before {
+  content: url("../../statics/images/Icon/chevron-down.svg");
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  transform: rotate(180deg);
+  bottom: -54px;
+  left: 33px;
+}
+.panel-navigation .panel-navigation-list .panel-navigation-list-item summary img {
   width: 100%;
   border-radius: 50%;
 }
-.panel-navigation ul li:nth-child(1)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(1)::after {
   content: "برند";
 }
-.panel-navigation ul li:nth-child(2)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(2)::after {
   content: "مدال";
 }
-.panel-navigation ul li:nth-child(3)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(3)::after {
   content: "زنجیر";
 }
-.panel-navigation ul li:nth-child(4)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(4)::after {
   content: "حلقه";
 }
-.panel-navigation ul li::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item::after {
   position: absolute;
   bottom: -30px;
   right: 20px;
@@ -435,54 +445,43 @@ header ul li details[open] ol li {
 .panel-navigation details {
   position: relative;
 }
-.panel-navigation details ul {
+.panel-navigation details .brand-select-panel,
+.panel-navigation details .brand-model,
+.panel-navigation details .brand-medal-chain-model-list {
   background-color: #fff;
   display: flex;
   position: absolute;
   z-index: 2;
-  width: 340px;
+  width: calc(100% - 30px);
   align-items: flex-start;
   border-radius: 8px;
   border: 1px solid #e6e5e5;
   padding: 8px;
-  top: 230px;
+  top: 115px;
   overflow-y: hidden;
   right: 16px;
 }
-.panel-navigation details ul li {
+.panel-navigation details .brand-select-panel li,
+.panel-navigation details .brand-model li,
+.panel-navigation details .brand-medal-chain-model-list li {
   border: none;
   border-radius: unset;
   background: none;
   box-shadow: none;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   padding: 0;
-  flex: 0 0 25%;
 }
-.panel-navigation details ul li dl dt {
+.panel-navigation details .brand-select-panel li dl dt,
+.panel-navigation details .brand-model li dl dt,
+.panel-navigation details .brand-medal-chain-model-list li dl dt {
   display: none;
 }
-.panel-navigation details ul li dl dd {
-  display: none;
-  height: 64px !important;
-}
-.panel-navigation details ul li dl dd:nth-child(2) {
-  display: block;
-}
-.panel-navigation details ul li dl dd:nth-child(2) img {
-  width: 74px;
-  height: 64px;
-}
-.panel-navigation details ul li ul {
-  display: none;
-}
-.panel-navigation details ul li::after {
+.panel-navigation details .brand-select-panel li::after,
+.panel-navigation details .brand-model li::after,
+.panel-navigation details .brand-medal-chain-model-list li::after {
   content: "" !important;
 }
 
-li:has(> details[open]) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:has(> details[open]) {
   position: unset;
 }
 
@@ -494,7 +493,7 @@ details[open] summary {
 }
 details[open] summary::after {
   content: "";
-  background: url(".././../statics/images/Icon/arrow.svg");
+  background: url(".././../statics/images/Icon/x-close.svg");
   position: absolute;
   bottom: -32px;
   left: 30px;
@@ -503,6 +502,9 @@ details[open] summary::after {
   height: 24px;
   background-position: center;
   background-repeat: no-repeat;
+}
+details[open] summary::before {
+  content: "" !important;
 }
 
 details summary::-webkit-details-marker,
@@ -564,14 +566,11 @@ details summary::marker {
   justify-content: center;
 }
 
-.panel-navigation ul details ul {
-  top: 215px;
-}
-.panel-navigation ul li:nth-child(3)::before {
+.panel-navigation .panel-navigation-list li:nth-child(3)::before {
   content: "";
   height: 3px;
   width: 120%;
   background-color: #d5b25d;
   position: absolute;
-  bottom: -40px;
+  bottom: -50px;
 }/*# sourceMappingURL=brand-medal-model-list.css.map */

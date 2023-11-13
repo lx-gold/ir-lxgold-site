@@ -99,6 +99,78 @@ dl {
   box-sizing: border-box;
 }
 
+header {
+  background-color: #fff;
+  padding: 11px 16px;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  position: relative;
+}
+header ul li u#lxgoldLogo {
+  text-indent: -90000px;
+  overflow: hidden;
+  background: url("../../../../statics/images/logo/header-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  min-width: 160px;
+  min-height: 34px;
+}
+header ul li details summary {
+  text-indent: -90000px;
+  overflow: hidden;
+  background: url("../../../../statics/images/Icon/Hamburger.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  min-width: 24px;
+  min-height: 24px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  z-index: 11;
+  cursor: pointer;
+}
+header ul li details ol {
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100vh;
+  right: -16px;
+  z-index: 10;
+  list-style: none;
+  padding: 50px 16px 16px 16px;
+  top: 0px;
+  width: 0px;
+  transition: all 0.5s;
+}
+header ul li details ol li {
+  color: #0d0d0d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+header ul li details[open] summary {
+  position: absolute;
+}
+header ul li details[open] ol {
+  width: 250px;
+  transition: all 0.5s;
+}
+header ul li details[open] ol li {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
 .brand-select-panel {
   display: flex;
   background: #f3f3f3;
@@ -266,29 +338,30 @@ dl {
 .panel-navigation {
   background-color: #fff;
   padding: 8px 8px 38px 8px;
+  position: relative;
 }
-.panel-navigation ul {
+.panel-navigation .panel-navigation-list {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 8px;
 }
-.panel-navigation ul li:empty {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty {
   background-color: #fbf8ef;
 }
-.panel-navigation ul li:empty:nth-child(1) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(1) {
   background-image: url("../images/panel/tag.svg");
 }
-.panel-navigation ul li:empty:nth-child(2) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(2) {
   background-image: url("../images/panel/link.svg");
 }
-.panel-navigation ul li:empty:nth-child(3) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(3) {
   background-image: url("../images/panel/badge.svg");
 }
-.panel-navigation ul li:empty:nth-child(4) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:empty:nth-child(4) {
   background-image: url("../images/panel/circle-triangle.svg");
 }
-.panel-navigation ul li {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item {
   border-radius: 50%;
   border: 1px solid #e6e5e5;
   width: 64px;
@@ -300,28 +373,28 @@ dl {
   justify-content: center;
   align-items: center;
 }
-.panel-navigation ul li summary {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item summary {
   width: 80px;
   height: 60px;
   display: flex;
 }
-.panel-navigation ul li summary img {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item summary img {
   width: 100%;
   border-radius: 50%;
 }
-.panel-navigation ul li:nth-child(1)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(1)::after {
   content: "برند";
 }
-.panel-navigation ul li:nth-child(2)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(2)::after {
   content: "مدال";
 }
-.panel-navigation ul li:nth-child(3)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(3)::after {
   content: "زنجیر";
 }
-.panel-navigation ul li:nth-child(4)::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:nth-child(4)::after {
   content: "حلقه";
 }
-.panel-navigation ul li::after {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item::after {
   position: absolute;
   bottom: -30px;
   right: 20px;
@@ -333,59 +406,63 @@ dl {
 .panel-navigation details {
   position: relative;
 }
-.panel-navigation details ul {
+.panel-navigation details .brand-select-panel,
+.panel-navigation details .brand-model,
+.panel-navigation details .brand-medal-chain-model-list {
   background-color: #fff;
   display: flex;
   position: absolute;
   z-index: 2;
-  width: 340px;
+  width: calc(100% - 30px);
   align-items: flex-start;
   border-radius: 8px;
   border: 1px solid #e6e5e5;
   padding: 8px;
-  top: 130px;
+  top: 115px;
   overflow-y: hidden;
   right: 16px;
 }
-.panel-navigation details ul li {
+.panel-navigation details .brand-select-panel li,
+.panel-navigation details .brand-model li,
+.panel-navigation details .brand-medal-chain-model-list li {
   border: none;
   border-radius: unset;
   background: none;
   box-shadow: none;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   padding: 0;
-  flex: 0 0 25%;
 }
-.panel-navigation details ul li dl dt {
+.panel-navigation details .brand-select-panel li dl dt,
+.panel-navigation details .brand-model li dl dt,
+.panel-navigation details .brand-medal-chain-model-list li dl dt {
   display: none;
 }
-.panel-navigation details ul li dl dd {
-  display: none;
-  height: 64px !important;
-}
-.panel-navigation details ul li dl dd:nth-child(2) {
-  display: block;
-}
-.panel-navigation details ul li dl dd:nth-child(2) img {
-  width: 74px;
-  height: 64px;
-}
-.panel-navigation details ul li ul {
-  display: none;
-}
-.panel-navigation details ul li::after {
+.panel-navigation details .brand-select-panel li::after,
+.panel-navigation details .brand-model li::after,
+.panel-navigation details .brand-medal-chain-model-list li::after {
   content: "" !important;
 }
 
-li:has(> details[open]) {
+.panel-navigation .panel-navigation-list .panel-navigation-list-item:has(> details[open]) {
   position: unset;
 }
 
 details[open] {
   position: unset;
+}
+details[open] summary {
+  position: relative;
+}
+details[open] summary::after {
+  content: "";
+  background: url(".././../statics/images/Icon/x-close.svg");
+  position: absolute;
+  bottom: -32px;
+  left: 30px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 details summary::-webkit-details-marker,
