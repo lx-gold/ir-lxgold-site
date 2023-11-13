@@ -85,7 +85,7 @@
       border-radius: 8px;
       border: 1px solid #e6e5e5;
       padding: 8px;
-      top: 130px;
+      top: 230px;
       overflow-y: hidden;
       right: 16px;
       li {
@@ -129,6 +129,22 @@ li:has(> details[open]) {
 }
 details[open] {
   position: unset;
+
+  summary {
+    position: relative;
+    &::after {
+      content: "";
+      background: url(".././../statics/images/Icon/arrow.svg");
+      position: absolute;
+      bottom: -32px;
+      left: 30px;
+      display: flex;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 details summary::-webkit-details-marker,

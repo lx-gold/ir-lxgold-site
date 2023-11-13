@@ -2,9 +2,15 @@
 @import "components/brand/brand-select-item";
 @import "components/model/model-list";
 @import "components/model/brand-panel";
+@import "components/share/header";
 @import "panel-navigation";
 
 .panel-navigation {
+  details{
+    ul{
+      top: 220px;
+    }
+  }
   ul {
     li {
       &:nth-child(2) {

@@ -336,7 +336,6 @@ dl {
 .panel-navigation details ul {
   background-color: #fff;
   display: flex;
-  flex-direction: column;
   position: absolute;
   z-index: 2;
   width: 340px;
@@ -344,29 +343,49 @@ dl {
   border-radius: 8px;
   border: 1px solid #e6e5e5;
   padding: 8px;
-  top: 72px;
+  top: 130px;
+  overflow-y: hidden;
+  right: 16px;
 }
 .panel-navigation details ul li {
   border: none;
+  border-radius: unset;
+  background: none;
+  box-shadow: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  flex: 0 0 25%;
 }
 .panel-navigation details ul li dl dt {
   display: none;
 }
 .panel-navigation details ul li dl dd {
   display: none;
+  height: 64px !important;
 }
 .panel-navigation details ul li dl dd:nth-child(2) {
   display: block;
 }
 .panel-navigation details ul li dl dd:nth-child(2) img {
-  width: 50px;
-  height: 50px;
+  width: 74px;
+  height: 64px;
 }
 .panel-navigation details ul li ul {
   display: none;
 }
 .panel-navigation details ul li::after {
   content: "" !important;
+}
+
+li:has(> details[open]) {
+  position: unset;
+}
+
+details[open] {
+  position: unset;
 }
 
 details summary::-webkit-details-marker,
