@@ -32,6 +32,7 @@
         font-weight: 400;
         line-height: 22px;
       }
+      
     }
     ul {
       margin-top: 8px;
@@ -59,12 +60,7 @@
 }
 
 .panel-navigation {
-  ul {
-    details {
-      ul {
-        top: 215px;
-      }
-    }
+  .panel-navigation-list {
     li {
       &:nth-child(3) {
         &::before {
@@ -73,7 +69,8 @@
           width: 120%;
           background-color: #d5b25d;
           position: absolute;
-          bottom: -40px;
+          bottom: -50px;
+
         }
       }
     }

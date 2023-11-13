@@ -130,15 +130,15 @@ module.exports = function buildModelBrandMedalPanelHtml
                 
                 const content =  `
                     <nav class="panel-navigation">
-                        <ul>
-                            <li>
+                        <ul class="panel-navigation-list">
+                            <li class="panel-navigation-list-item">
                                 ${selectBrandHtmlContent}
                             </li>
-                            <li>
+                            <li class="panel-navigation-list-item">
                                 ${selectMedalHtmlContent}
                             </li>
-                            <li></li>
-                            <li></li>
+                            <li class="panel-navigation-list-item"></li>
+                            <li class="panel-navigation-list-item"></li>
                         </ul>
                     </nav>
                     `+ selectChainHtmlContent + modelListHtmlContent;

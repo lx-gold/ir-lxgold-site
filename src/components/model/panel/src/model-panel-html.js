@@ -59,11 +59,11 @@ module.exports = function buildModelPanelHtml
                 
                 const htmlcontent = `
                     <nav class="panel-navigation">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ul class="panel-navigation-list">
+                            <li class="panel-navigation-list-item"></li>
+                            <li class="panel-navigation-list-item"></li>
+                            <li class="panel-navigation-list-item"></li>
+                            <li class="panel-navigation-list-item"></li>
                         </ul>
                     </nav>
                     `+ selectBrandHtmlContent + modelListHtmlContent;

@@ -3,6 +3,10 @@
 @import "panel-navigation";
 @import "components/share/header";
 @import "components/model/model-list";
+@import "components/brand/brand-select-item";
+@import "components/model/brand-panel";
+
+
 
 .brand-medal-chain-model-list {
   background-color: #fff;
@@ -58,17 +62,16 @@
 }
 
 .panel-navigation {
-  details {
-    ul {
-      top: 260px;
-    }
-  }
-  ul {
+  .panel-navigation-list {
     li {
       &:nth-child(3) {
         summary {
           width: 59px;
           height: 59px;
+          &::before,
+          &::after{
+            left: 20px;
+          }
         }
       }
       &:nth-child(4) {
@@ -78,7 +81,7 @@
           width: 120%;
           background-color: #d5b25d;
           position: absolute;
-          bottom: -40px;
+          bottom: -50px;
         }
       }
     }
