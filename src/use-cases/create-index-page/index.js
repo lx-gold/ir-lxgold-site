@@ -8,8 +8,8 @@ module.exports = function
     {
         indexPagesViews,
         saveFile,
-        getAllModelListDB,
-        getAllBrandListDB
+        modelList,
+        brandList
     }
 )
     {
@@ -17,8 +17,8 @@ module.exports = function
             {
                 indexGenerator:indexPagesViews.html,
                 saveFile:saveFile,
-                getAllModelListDB: getAllModelListDB,
-                getAllBrandListDB: getAllBrandListDB
+                modelList: modelList,
+                brandList: brandList
             }
         );
 
@@ -26,8 +26,8 @@ module.exports = function
             {
                 indexAmpGenerator: indexPagesViews.amp,
                 saveFile:saveFile,
-                getAllModelListDB: getAllModelListDB,
-                getAllBrandListDB: getAllBrandListDB
+                modelList: modelList,
+                brandList: brandList
             }
         );
 

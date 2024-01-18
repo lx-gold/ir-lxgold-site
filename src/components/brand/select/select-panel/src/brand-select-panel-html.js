@@ -56,7 +56,7 @@ module.exports = function buildSelectBrandPanelHtml
                         <details>
                             <summary>
                                 <img
-                                    src = '/statics/images/brand/${selectedBrand.logo_file_name}'
+                                    src = 'https://assets.lxgold.ir/images/brand/${selectedBrand.logo_file_name}'
                                 />
                                 
                             </summary>

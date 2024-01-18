@@ -20,7 +20,7 @@ module.exports = function buildHeadCssTag
             }
         )
             {
-                // /statics/style
+                // https://assets.lxgold.ir/style
                 const cssTag = `
                     <link
                         rel="stylesheet"

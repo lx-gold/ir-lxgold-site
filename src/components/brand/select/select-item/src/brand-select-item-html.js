@@ -55,7 +55,7 @@ module.exports = function buildBrandSelectItemHtml
                             </dt>
                             <dd>
                                 <img
-                                    src = '/statics/images/brand/${brand.logo_file_name}'
+                                    src = 'https://assets.lxgold.ir/images/brand/${brand.logo_file_name}'
                                 />
                             </dd>
                             

@@ -85,7 +85,7 @@ module.exports = function buildChainSelectItemAmp
                             <dd>
                                 <img
                                     width='100px'
-                                    src='/statics/images/chain/${chain.thumbnail_file_name}'
+                                    src='https://assets.lxgold.ir/images/chain/${chain.thumbnail_file_name}'
                                 />
                             </dd>
                             

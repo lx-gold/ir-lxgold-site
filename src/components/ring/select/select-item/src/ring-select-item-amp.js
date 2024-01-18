@@ -95,7 +95,7 @@ module.exports = function buildRingSelectItemAmp
                             <dd>
                                 <img
                                     width='100px'
-                                    src='/statics/images/ring/${ring.thumbnail_file_name}'
+                                    src='https://assets.lxgold.ir/images/ring/${ring.thumbnail_file_name}'
                                 />
                             </dd>
                             

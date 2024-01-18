@@ -3,8 +3,8 @@ module.exports = function buildGenerateIndexAmpPage
     {
         indexAmpGenerator,
         saveFile,
-        getAllModelListDB,
-        getAllBrandListDB
+        modelList,
+        brandList
     }
 )
     {
@@ -26,18 +26,18 @@ module.exports = function buildGenerateIndexAmpPage
 
         if
         (
-            !getAllModelListDB
+            !modelList
         )
             {
-                throw new Error('buildGenerateIndexAmpPage mush have getAllModelListDB');
+                throw new Error('buildGenerateIndexAmpPage mush have modelList');
             }
 
         if
         (
-            !getAllBrandListDB
+            !brandList
         )
             {
-                throw new Error('buildGenerateIndexAmpPage mush have getAllBrandListDB');
+                throw new Error('buildGenerateIndexAmpPage mush have brandList');
             }
             
         return async function generateIndexAmpPage
@@ -45,8 +45,6 @@ module.exports = function buildGenerateIndexAmpPage
             {
                 try
                     {
-                        const modelList = await getAllModelListDB();
-                        const brandList = await getAllBrandListDB();
 
                         const indexAmpPageContent = await indexAmpGenerator(
                             {

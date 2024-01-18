@@ -60,8 +60,8 @@ module.exports = function
             {
                 indexPagesViews: viewServices.index,
                 saveFile: saveFile,
-                getAllModelListDB: dataAccess.json.model.getAllModel,
-                getAllBrandListDB: dataAccess.json.brand.getAllBrand
+                modelList: dataAccess.json.model.getAllModel(),
+                brandList: dataAccess.json.brand.getAllBrand()
             }
         );
         

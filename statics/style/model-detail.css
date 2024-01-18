@@ -113,7 +113,7 @@ header ul {
 header ul li u#lxgoldLogo {
   text-indent: -90000px;
   overflow: hidden;
-  background: url("../../../../statics/images/logo/header-logo.svg");
+  background: url("https://assets.lxgold.ir/images/logo/header-logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   display: block;
@@ -337,7 +337,7 @@ header ul li details[open] ol li {
 
 .panel-navigation {
   background-color: #fff;
-  padding: 8px 8px 38px 8px;
+  padding: 8px 8px 50px 8px;
   position: relative;
 }
 .panel-navigation .panel-navigation-list {
@@ -377,6 +377,15 @@ header ul li details[open] ol li {
   width: 80px;
   height: 60px;
   display: flex;
+}
+.panel-navigation .panel-navigation-list .panel-navigation-list-item summary::before {
+  content: url("../../statics/images/Icon/chevron-down.svg");
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  transform: rotate(180deg);
+  bottom: -54px;
+  left: 33px;
 }
 .panel-navigation .panel-navigation-list .panel-navigation-list-item summary img {
   width: 100%;
@@ -463,6 +472,9 @@ details[open] summary::after {
   height: 24px;
   background-position: center;
   background-repeat: no-repeat;
+}
+details[open] summary::before {
+  content: "" !important;
 }
 
 details summary::-webkit-details-marker,

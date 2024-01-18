@@ -41,7 +41,8 @@ module.exports = function buildBrandMedalSitemapPanle
                     }
 
                 const brandMedalUrlList = await Promise.all(
-                    medalList.map(
+                    Array.from(medalList)
+                    .map(
                         (medal) => 
                             {
                                 const result = `https://lxgold.ir/models/brand/${brand.id}/medal/${medal.id}/`;

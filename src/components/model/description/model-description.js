@@ -40,7 +40,7 @@ module.exports = function buildModelDescription
                 
                 return `
                         <img
-                            src = '/statics/images/brand/acura-logo.png'
+                            src = 'https://assets.lxgold.ir/images/brand/acura-logo.png'
                         />
                     <article>
 

@@ -3,13 +3,13 @@ const buildGetAllRingByBrandAndMedalAndChain = require('./src/get-all-ring-by-br
 module.exports = function
 (
     {
-        getAllModel
+        modelList
     }
 )
     {
         const getAllRingByBrandAndMedalAndChain = buildGetAllRingByBrandAndMedalAndChain(
             {
-                getAllModel:getAllModel
+                modelList:modelList
             }
 
         );

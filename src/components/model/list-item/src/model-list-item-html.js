@@ -51,7 +51,8 @@ module.exports = function buileModelListItemHtml
                         model: model
                     }
                 );
-                
+
+                console.log(model.id);
                 return `
                     <li>
                         <dl>
@@ -61,7 +62,7 @@ module.exports = function buileModelListItemHtml
                             </dt>
                             <dd>
                                 <img
-                                    src = '/statics/images/brand/acura-logo.png'
+                                    src = 'https://assets.lxgold.ir/images/brand/acura-logo.png'
                                 />
                             </dd>
 

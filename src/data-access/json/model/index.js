@@ -4,28 +4,30 @@ module.exports = function
 
         const { getAllModel } = require('./get-all-model')();
 
+        const modelList= getAllModel();
+
         const { getAllModelByBrand } = require('./get-all-model-by-brand')(
             {
-                getAllModel: getAllModel
+                modelList: modelList
             }
         )
 
         const { getAllModelByBrandAndMedal } = require('./get-all-model-by-brand-and-medal')(
             {
-                getAllModel: getAllModel
+                modelList: modelList
             }
         );
 
         const { getAllModelByBrandAndMedalAndChain } = require('./get-all-model-by-brand-and-medal-and-chain')(
             {
-                getAllModel: getAllModel
+                modelList: modelList
             }
         );
 
         
         const { getAllModelByBrandAndMedalAndChainAndRing } = require('./get-all-model-by-brand-and-medal-and-chain-and-ring')(
             {
-                getAllModel: getAllModel
+                modelList: modelList
             }
         );
         

@@ -1,14 +1,14 @@
 module.exports = function
 (
     {
-        getAllModel
+        modelList
     }
 )
     {
 
         const { getAllMedalByBrand } = require('./get-all-medal-by-brand')(
             {
-                getAllModel: getAllModel
+                modelList: modelList
             }
         );
 

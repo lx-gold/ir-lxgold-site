@@ -74,7 +74,7 @@ module.exports = function buildMedalSelectItemAmp
                             </dt>
                             <dd>
                                 <img
-                                    src = '/statics/images/brand/acura-logo.png'
+                                    src = 'https://assets.lxgold.ir/images/medal/${medal.thumbnail_file_name}'
                                 />
                             </dd>
                             

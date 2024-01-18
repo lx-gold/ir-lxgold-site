@@ -86,7 +86,9 @@ module.exports = function buildCreateBrandMedalChainRingSitemapPage
                                 );
 
                                 return await Promise.all(
-                                    brandMedalList.map(
+                                    Array.from(
+                                        brandMedalList
+                                    ).map(
                                         async (medal) => 
                                             {
                                                 const brandMedalChainList = await getAllChainByBrandAndMedalDB(
@@ -98,7 +100,9 @@ module.exports = function buildCreateBrandMedalChainRingSitemapPage
 
 
                                                 return await Promise.all(
-                                                    brandMedalChainList.map(
+                                                    Array.from(
+                                                        brandMedalChainList
+                                                    ).map(
                                                         async (chain) => 
                                                             {
                                                                 const brandMedalChainRingList = await getAllRingByBrandAndMedalAndChainDB(

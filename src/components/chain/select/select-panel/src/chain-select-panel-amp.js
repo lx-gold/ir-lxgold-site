@@ -51,11 +51,9 @@ module.exports = function buildSelectChainPanelAmp
 
                 for 
                 (
-                    let chainIndex in chainList
+                    let currentChain of chainList
                 )
                     {
-                        let currentChain = chainList[chainIndex];
-
                         const currentChainAmpRender =  await chainSelectItemRenderAmp(
                             {
                                 brand: brand,
@@ -77,7 +75,7 @@ module.exports = function buildSelectChainPanelAmp
                         <details>
                             <summary>
                                 <img
-                                    src='/statics/images/chain/${selectedChain.thumbnail_file_name}'
+                                    src='https://assets.lxgold.ir/images/chain/${selectedChain.thumbnail_file_name}'
                                 />
                                 
                             </summary>

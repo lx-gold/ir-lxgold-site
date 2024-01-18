@@ -1,10 +1,12 @@
 {
-  "name": "website",
+  "name": "ir-lxgold-site",
   "version": "1.0.0",
   "description": "",
   "main": "keyword.js",
   "scripts": {
+    "serve": "node serve.js",
     "build": "node index.js",
+    "deploy": "node deploy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +15,8 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "html-minifier": "^4.0.0",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "dotenv": "^16.0.3",
+    "ftp-deploy": "^2.4.5"
   }
 }

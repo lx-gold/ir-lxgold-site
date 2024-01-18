@@ -49,7 +49,10 @@ module.exports = function buildBrandMedalChainSitemapPanle
                         throw new Error('brandMedalChainSitemapPanle must have chainList')
                     }
 
-                const brandMedalChainUrlList = chainList.map(
+                const brandMedalChainUrlList = 
+                Array.from(
+                    chainList
+                ).map(
                     (chain) => 
                         {
                             const result = `https://lxgold.ir/models/brand/${brand.id}/medal/${medal.id}/chain/${chain.id}/`;

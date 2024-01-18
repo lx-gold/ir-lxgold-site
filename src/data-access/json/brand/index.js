@@ -1,16 +1,8 @@
 module.exports = function
-(
-    {
-        getAllModel
-    }
-)
+()
     {
 
-        const { getAllBrand } = require('./get-all-brand')(
-            {
-                getAllModel: getAllModel
-            }
-        );
+        const { getAllBrand } = require('./get-all-brand')();
 
         const services = Object.freeze(
             {

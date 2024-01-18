@@ -61,10 +61,9 @@ module.exports = function buildSelectRingPanelAmp
 
                 for 
                 (
-                    let ringIndex in ringList
+                    let currentRing of ringList
                 )
                     {
-                        let currentRing = ringList[ringIndex];
 
                         const currentRingAmpRender =  await ringSelectItemAmpRender(
                             {
@@ -88,7 +87,7 @@ module.exports = function buildSelectRingPanelAmp
                         <details>
                             <summary>
                                 <img
-                                    src='/statics/images/ring/${selectedRing.thumbnail_file_name}'
+                                    src='https://assets.lxgold.ir/images/ring/${selectedRing.thumbnail_file_name}'
                                 />
                                 
                             </summary>

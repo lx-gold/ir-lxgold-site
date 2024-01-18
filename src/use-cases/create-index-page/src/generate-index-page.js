@@ -3,8 +3,8 @@ module.exports = function buildGenerateIndexPage
     {
         indexGenerator,
         saveFile,
-        getAllModelListDB,
-        getAllBrandListDB
+        modelList,
+        brandList
     }
 )
     {
@@ -26,18 +26,18 @@ module.exports = function buildGenerateIndexPage
 
         if
         (
-            !getAllModelListDB
+            !modelList
         )
             {
-                throw new Error('buildGenerateIndexPage mush have getAllModelListDB');
+                throw new Error('buildGenerateIndexPage mush have modelList');
             }
 
         if
         (
-            !getAllBrandListDB
+            !brandList
         )
             {
-                throw new Error('buildGenerateIndexPage mush have getAllBrandListDB');
+                throw new Error('buildGenerateIndexPage mush have brandList');
             }
             
         return async function generateIndexPage
@@ -45,8 +45,6 @@ module.exports = function buildGenerateIndexPage
             {
                 try
                     {
-                        const modelList = await getAllModelListDB();
-                        const brandList = await getAllBrandListDB();
 
                         const indexPageContent = await indexGenerator(
                             {

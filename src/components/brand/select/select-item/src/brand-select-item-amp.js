@@ -56,7 +56,7 @@ module.exports = function buildBrandSelectItemAmp
                             <dd>
                                 <img
                                     width = '100px'
-                                    src = '/statics/images/brand/${brand.logo_file_name}'
+                                    src = 'https://assets.lxgold.ir/images/brand/${brand.logo_file_name}'
                                 />
                             </dd>
                             

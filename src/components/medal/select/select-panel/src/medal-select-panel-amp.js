@@ -42,11 +42,9 @@ module.exports = function buildSelectMedalPanelAmp
 
                 for 
                 (
-                    let medalIndex in medalList
+                    let currentMedal of medalList
                 )
                     {
-                        let currentMedal = medalList[medalIndex];
-
                         const currentMedalAmpRender =  await medalSelectItemAmpRender(
                             {
                                 brand: brand,
@@ -67,7 +65,7 @@ module.exports = function buildSelectMedalPanelAmp
                         <details>
                             <summary>
                                 <img
-                                    src = '/statics/images/brand/acura-logo.png'
+                                    src = 'https://assets.lxgold.ir/images/medal/${selectedMedal.thumbnail_file_name}'
                                 />
                                 
                             </summary>

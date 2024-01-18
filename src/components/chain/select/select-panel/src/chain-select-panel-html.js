@@ -51,10 +51,9 @@ module.exports = function buildSelectChainPanelHtml
 
                 for 
                 (
-                    let chainIndex in chainList
+                    let currentChain of chainList
                 )
                     {
-                        let currentChain = chainList[chainIndex];
 
                         const currentChainHtmlRender =  await chainSelectItemRenderHtml(
                             {
@@ -77,7 +76,7 @@ module.exports = function buildSelectChainPanelHtml
                         <details>
                             <summary>
                                 <img
-                                    src='/statics/images/chain/${selectedChain.thumbnail_file_name}'
+                                    src='https://assets.lxgold.ir/images/chain/${selectedChain.thumbnail_file_name}'
                                 />
                                 
                             </summary>

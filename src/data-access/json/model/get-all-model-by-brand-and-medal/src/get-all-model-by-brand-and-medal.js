@@ -1,16 +1,16 @@
 module.exports = function buildGetAllModelByBrandAndMedal
 (
     {
-        getAllModel
+        modelList
     }
 )
     {
         if
         (
-            !getAllModel
+            !modelList
         )
             {
-                throw new Error('buildGetAllModelByBrandAndMedal must have getAllModel');
+                throw new Error('buildGetAllModelByBrandAndMedal must have modelList');
             }
 
         return async function getAllModelByBrandAndMedal
@@ -37,7 +37,6 @@ module.exports = function buildGetAllModelByBrandAndMedal
                         throw new Error('getAllModelByBrandAndChain must have medalId');
                     }
                     
-                const modelList = await getAllModel();
 
                 const filteredModelList = modelList.filter(
                     (currentModel) => 

@@ -1,37 +1,10 @@
 module.exports = function buildGetAllBrand
-(
+()
     {
-        getAllModel
-    }
-)
-    {
-        if
-        (
-            !getAllModel
-        )
-            {
-                throw new Error('buildGetAllBrand must have getAllModel');
-            }
-
-        return async function getAllBrand
+        
+        return function getAllBrand
         ()
             {
-                // const modelList = await getAllModel();
-
-                // let brandList = modelList.map(
-                //     (
-                //         currentModel
-                //     )=>
-                //         {
-                //             return currentModel.brand
-                //         }
-                // )
-
-                
-
-                // const uniquebrandList = [...new Set(brandList)];
-
-                // console.log(uniquebrandList);
 
                 const uniquebrandList = [
                     {
@@ -46,12 +19,12 @@ module.exports = function buildGetAllBrand
                         title_en:'BMW',
                         logo_file_name: 'BMW-logo.png'
                     },
-                    {
-                        id:3,
-                        title_fa:'لکسوز',
-                        title_en:'Lexus',
-                        logo_file_name: 'lexus-logo.png'
-                    },
+                    // {
+                    //     id:3,
+                    //     title_fa:'لکسوز',
+                    //     title_en:'Lexus',
+                    //     logo_file_name: 'lexus-logo.png'
+                    // },
                 ]
                
                 return uniquebrandList;

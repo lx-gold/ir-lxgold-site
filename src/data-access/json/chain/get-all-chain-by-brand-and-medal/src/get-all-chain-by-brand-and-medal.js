@@ -1,16 +1,16 @@
 module.exports = function buildGetAllChainByBrandAndMedal
 (
     {
-        getAllModel
+        modelList
     }
 )
     {
         if
         (
-            !getAllModel
+            !modelList
         )
             {
-                throw new Error('buildGetAllChainByBrandAndMedal must have getAllModel');
+                throw new Error('buildGetAllChainByBrandAndMedal must have modelList');
             }
         return async function getAllChainByBrandAndMedal
         (
@@ -36,8 +36,6 @@ module.exports = function buildGetAllChainByBrandAndMedal
                         throw new Error('getAllChainByBrandAndMedal must have medalId');
                     }
 
-                const modelList = await getAllModel();
-
                 let filteredModelList = modelList.filter(
                     (currentModel) => 
                         {
@@ -61,6 +59,9 @@ module.exports = function buildGetAllChainByBrandAndMedal
                         }
                 )
 
-                return filteredChainList;
+                const uniqFilteredChainList = new Set(filteredChainList);
+
+                return uniqFilteredChainList;
+
             }
     }

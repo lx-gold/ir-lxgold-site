@@ -2,28 +2,26 @@ module.exports = function
 ()
     {
         const modelServices = require('./model')();
+
+        const modelList = modelServices.getAllModel();
         
         const chainServices = require('./chain')(
             {
-                getAllModel: modelServices.getAllModel
+                modelList: modelList
             }
         );
 
         const medalServices = require('./medal')(
             {
-                getAllModel: modelServices.getAllModel
+                modelList: modelList
             }
         );
 
-        const brandServices = require('./brand')(
-            {
-                getAllModel: modelServices.getAllModel
-            }
-        );
+        const brandServices = require('./brand')();
 
         const ringServices = require('./ring')(
             {
-                getAllModel: modelServices.getAllModel
+                modelList: modelList
             }
         );
 

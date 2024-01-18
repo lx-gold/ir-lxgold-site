@@ -3,13 +3,13 @@ const buildGetAllModelByBrandAndMedalAndChain = require('./src/get-all-model-by-
 module.exports = function
 (
     {
-        getAllModel
+        modelList
     }
 )
     {
         const getAllModelByBrandAndMedalAndChain = buildGetAllModelByBrandAndMedalAndChain(
             {
-                getAllModel: getAllModel
+                modelList: modelList
             }
 
         );

@@ -44,7 +44,7 @@ module.exports = function buildHeadOgTagList
                     />
                     <meta
                         property="og:image"
-                        content="https://lxgold.ir/statics/images/logo/logo.png"
+                        content="https://lxgold.irhttps://assets.lxgold.ir/images/logo/logo.png"
                     />
                 `;
                 return result;

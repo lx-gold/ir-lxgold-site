@@ -1,17 +1,9 @@
 const buildGetAllBrand = require('./src/get-all-brand');
 
 module.exports = function
-(
+()
     {
-        getAllModel
-    }
-)
-    {
-        const getAllBrand = buildGetAllBrand(
-            {
-                getAllModel: getAllModel
-            }
-        );
+        const getAllBrand = buildGetAllBrand();
 
         const services = Object.freeze(
             {
