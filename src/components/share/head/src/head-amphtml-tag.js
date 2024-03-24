@@ -78,7 +78,7 @@ module.exports = function buildHeadAmphtmlTag
                             isDetail
                         )
                             {
-                                middleUrl = 'model'
+                                middleUrl = 'models'
                             }
                         else if
                         (

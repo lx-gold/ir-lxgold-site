@@ -25,7 +25,7 @@ a {
 
 @-moz-document url-prefix() {
   button {
-    font-family: NunitoSans, serif !important;
+    font-family: NunitoSans, serif;
   }
 }
 ul {
@@ -333,7 +333,7 @@ header ul li details[open] ol li {
 .panel-navigation details .brand-select-panel li::after,
 .panel-navigation details .brand-model li::after,
 .panel-navigation details .brand-medal-chain-model-list li::after {
-  content: "" !important;
+  content: "";
 }
 
 .panel-navigation .panel-navigation-list .panel-navigation-list-item:has(> details[open]) {
@@ -359,7 +359,7 @@ details[open] summary::after {
   background-repeat: no-repeat;
 }
 details[open] summary::before {
-  content: "" !important;
+  content: "";
 }
 
 details summary::-webkit-details-marker,

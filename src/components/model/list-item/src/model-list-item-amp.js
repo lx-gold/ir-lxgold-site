@@ -59,9 +59,11 @@ module.exports = function buileModelListItemAmp
                                 تصویر
                             </dt>
                             <dd>
-                                <img
-                                    src = 'https://assets.lxgold.ir/images/brand/acura-logo.png'
-                                />
+                                <amp-img
+                                    width="100px"
+                                    height="100px"
+                                    src = 'https://assets.lxgold.ir/images/model/${model.id}.png'
+                                ></amp-img>
                             </dd>
                             <dt>
                                 عنوان

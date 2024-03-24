@@ -93,10 +93,11 @@ module.exports = function buildRingSelectItemAmp
                                 لوگو
                             </dt>
                             <dd>
-                                <img
+                                <amp-img
                                     width='100px'
+                                    height="100px"
                                     src='https://assets.lxgold.ir/images/ring/${ring.thumbnail_file_name}'
-                                />
+                                ></amp-img>
                             </dd>
                             
                             <dt>

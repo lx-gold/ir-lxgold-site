@@ -73,9 +73,11 @@ module.exports = function buildMedalSelectItemAmp
                                 لوگو
                             </dt>
                             <dd>
-                                <img
+                                <amp-img
+                                    width="100px"
+                                    height="100px"
                                     src = 'https://assets.lxgold.ir/images/medal/${medal.thumbnail_file_name}'
-                                />
+                                ></amp-img>
                             </dd>
                             
                             <dt>

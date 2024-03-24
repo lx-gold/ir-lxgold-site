@@ -54,10 +54,11 @@ module.exports = function buildBrandSelectItemAmp
                                 لوگو
                             </dt>
                             <dd>
-                                <img
+                                <amp-img
                                     width = '100px'
+                                    height="100px"
                                     src = 'https://assets.lxgold.ir/images/brand/${brand.logo_file_name}'
-                                />
+                                ></amp-img>
                             </dd>
                             
                             <dt>

@@ -4,20 +4,20 @@ module.exports = function buildGetAllModel
 
 
         const chainList = [
-            {
-                id:1,
-                title_fa:'کارب',
-                title_en:'curb',
-                thumbnail_file_name:'1_curb.jpg',
-                weight:10
-            },
-            {
-                id:2,
-                title_fa:'مهره ای',
-                title_en:'bead',
-                thumbnail_file_name:'2_bead.jpg',
-                weight:7
-            },
+            // {
+            //     id:1,
+            //     title_fa:'کارب',
+            //     title_en:'curb',
+            //     thumbnail_file_name:'1_curb.jpg',
+            //     weight:10
+            // },
+            // {
+            //     id:2,
+            //     title_fa:'مهره ای',
+            //     title_en:'bead',
+            //     thumbnail_file_name:'2_bead.jpg',
+            //     weight:7
+            // },
             {
                 id:3,
                 title_fa:'مربعی',
@@ -25,20 +25,20 @@ module.exports = function buildGetAllModel
                 thumbnail_file_name:'3_box.jpg',
                 weight:8
             },
-            {
-                id:4,
-                title_fa:'کابلی',
-                title_en:'cable',
-                thumbnail_file_name:'4_cable.jpg',
-                weight:5
-            },
-            {
-                id:5,
-                title_fa:'حلقه ای',
-                title_en:'ring',
-                thumbnail_file_name:'5_ring.jpg',
-                weight:3
-            },
+            // {
+            //     id:4,
+            //     title_fa:'کابلی',
+            //     title_en:'cable',
+            //     thumbnail_file_name:'4_cable.jpg',
+            //     weight:5
+            // },
+            // {
+            //     id:5,
+            //     title_fa:'حلقه ای',
+            //     title_en:'ring',
+            //     thumbnail_file_name:'5_ring.jpg',
+            //     weight:3
+            // },
             {
                 id:6,
                 title_fa:'دریانوردی',
@@ -50,13 +50,13 @@ module.exports = function buildGetAllModel
 
         const ringList = 
         [
-            {
-                id: 1,
-                title_fa:"طنابی",
-                title_en:"rope",
-                thumbnail_file_name:'1_rope.jpg',
-                weight:3
-            },
+            // {
+            //     id: 1,
+            //     title_fa:"طنابی",
+            //     title_en:"rope",
+            //     thumbnail_file_name:'1_rope.jpg',
+            //     weight:3
+            // },
             {
                 id: 2,
                 title_fa:"کلیپس",
@@ -68,13 +68,14 @@ module.exports = function buildGetAllModel
                 id: 3,
                 title_fa:"ساده",
                 title_en:"simple",
-                thumbnail_file_name:'3_simple.jpeg',
+                thumbnail_file_name:'3_simple.jpg',
                 weight:9
             }
         ];
 
         const brandMedalList = [
             {
+                id:1,
                 brand :
                     {
                         id:1,
@@ -92,6 +93,7 @@ module.exports = function buildGetAllModel
                     },
             },
             {
+                id:2,
                 brand :
                     {
                         id:2,
@@ -105,26 +107,44 @@ module.exports = function buildGetAllModel
                         title_fa:'فیروزه ای',
                         title_en:'blue',
                         thumbnail_file_name:'2_bmw-colored.JPG',
-                        weight:5
+                        weight:6
                     },
             },
             {
+                id:3,
                 brand :
                     {
-                        id:2,
-                        title_fa:'بی ام و',
-                        title_en:'BMW',
-                        logo_file_name: 'BMW-logo.png'
+                        id:1,
+                        title_fa:'بنز',
+                        title_en:'benze',
+                        logo_file_name: 'mercedes-benz-logo.png'
                     },
                 medal :
                     {
                         id:2,
-                        title_fa:'ساده',
-                        title_en:'simple',
-                        thumbnail_file_name:'3_bmw-simple.JPG',
+                        title_fa:'برلیان',
+                        title_en:'brelian',
+                        thumbnail_file_name:'3.png',
                         weight:5
                     },
-            }
+            },
+            // {
+            //     brand :
+            //         {
+            //             id:2,
+            //             title_fa:'بی ام و',
+            //             title_en:'BMW',
+            //             logo_file_name: 'BMW-logo.png'
+            //         },
+            //     medal :
+            //         {
+            //             id:2,
+            //             title_fa:'ساده',
+            //             title_en:'simple',
+            //             thumbnail_file_name:'3_bmw-simple.JPG',
+            //             weight:5
+            //         },
+            // }
 
         ];
 

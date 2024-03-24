@@ -48,7 +48,7 @@ module.exports = function buildMinifyCss
 
                 const cssFilePath = `${STYLE_PATH}/${fileName}`;
                 
-                const cssContent = fs.readFileSync(cssFilePath,'utf8');
+                const cssContent = fs.readFileSync(cssFilePath,'utf8').replace('@charset "UTF-8";', '');
                 
                 const minifyContent = minify(cssContent, 
                     {

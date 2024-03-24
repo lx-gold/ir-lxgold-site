@@ -24,7 +24,7 @@ a {
 
 @-moz-document url-prefix() {
   button {
-    font-family: NunitoSans, serif !important;
+    font-family: NunitoSans, serif;
   }
 }
 ul {

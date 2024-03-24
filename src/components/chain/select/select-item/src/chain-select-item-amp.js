@@ -83,10 +83,11 @@ module.exports = function buildChainSelectItemAmp
                                 لوگو
                             </dt>
                             <dd>
-                                <img
+                                <amp-img
                                     width='100px'
+                                    height="100px"
                                     src='https://assets.lxgold.ir/images/chain/${chain.thumbnail_file_name}'
-                                />
+                                ></amp-img>
                             </dd>
                             
                             <dt>

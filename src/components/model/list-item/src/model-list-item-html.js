@@ -62,7 +62,7 @@ module.exports = function buileModelListItemHtml
                             </dt>
                             <dd>
                                 <img
-                                    src = 'https://assets.lxgold.ir/images/brand/acura-logo.png'
+                                    src = 'https://assets.lxgold.ir/images/model/${model.id}.png'
                                 />
                             </dd>
 
